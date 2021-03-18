@@ -6,24 +6,6 @@ a {
     color:inherit;
 }
 
-li {
-    display: list-item;
-    list-style-type: circle;
-}
-
-ul {
-    display: list-item;
-    list-style-type: circle;
-}
-
-@font-face {
-    font-family: robotoFont;
-    src: url(roboto.woff);
- }
- 
-* {
-    font-family: robotoFont;
-}
 
 .tinyimage {
     width: 80px;
@@ -42,8 +24,21 @@ ul {
     margin-left: 50px;
 }
 
-#body {
+.noboxshadow {
+    box-shadow: none!important;
+}
+
+.collapsible {
+  
+    box-shadow: none !important;
+}
+.collapsible-header {
+    border: none !important;
+}
+
+body {
     background-color: #e1ffc2;
+    font-family: 'Inconsolata', monospace;
 }
 
 #nav {
@@ -69,6 +64,9 @@ ul {
 }
 
 #project {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    border-bottom: 0px;
     text-align: center;
     color: white;
 }
