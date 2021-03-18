@@ -1,14 +1,45 @@
 img {
-    width: 200px;
+    width: 165px;
 }
 
-.imagewizarre {
-    width: 800px;
+a {
+    color:inherit;
+}
+
+li {
+    display: list-item;
+    list-style-type: circle;
+}
+
+ul {
+    display: list-item;
+    list-style-type: circle;
+}
+
+@font-face {
+    font-family: robotoFont;
+    src: url(roboto.woff);
+ }
+ 
+* {
+    font-family: robotoFont;
+}
+
+.tinyimage {
+    width: 80px;
 }
 
 .sticky-nav{
     position: sticky;
     top: 0;
+}
+
+.center{
+    align-content: center;
+}
+
+.mageragauche {
+    margin-left: 50px;
 }
 
 #body {
@@ -22,6 +53,11 @@ img {
 #mainpart {
     margin-top: 50px;
     margin-bottom: 50px;
+}
+
+#incard {
+    margin-top: 0px;
+    margin-bottom: 0px;
 }
 
 #mywork {
