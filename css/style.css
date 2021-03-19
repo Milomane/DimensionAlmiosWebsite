@@ -43,6 +43,23 @@ a {
     margin-bottom: 0px;
 }
 
+.no-padding {
+    padding-right: 0px;
+}
+
+.row .col.item-card-left{
+    padding-left:2.5px!important;
+}
+
+.row .col.item-card-middle{
+    padding-right:2.5px!important;
+    padding-left:2.5px!important;
+}
+
+.row .col.item-card-right{
+    padding-right:2.5px!important;
+}
+
 .little-padding {
     padding-top: 10px;
     padding-bottom: 10px;
