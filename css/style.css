@@ -6,6 +6,10 @@ a {
     color:inherit;
 }
 
+.carousel .carousel-item {
+    width:400px !important;
+    height: fit-content !important;
+}
 
 .tinyimage {
     width: 80px;
