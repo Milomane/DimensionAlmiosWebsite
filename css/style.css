@@ -79,6 +79,14 @@ a {
     color: cornflowerblue;
 }
 
+.findbtn {
+    background-color: #2c393f;
+}
+
+.btn:hover.findbtn {
+    background-color: #6d0d0d;
+}
+
 body {
     background-color: #2c393f;
     font-family: 'Inconsolata', monospace;
