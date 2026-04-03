@@ -1,228 +1,567 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr" data-theme="dark">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@500;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-    <link rel="stylesheet" href="css/style.css">
-    <title>The website of Milo</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Florentin Roberge — Développeur Gameplay Unity / C#, 6 ans d'expérience. Mobile, VR, Multijoueur, Outils.">
+  <title>Florentin Roberge — Game Developer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <script>
+    // Apply theme & lang before render (no flash).
+    // URL params take priority so settings survive file:// isolation.
+    (function(){
+      var p     = new URLSearchParams(location.search);
+      var theme = p.get('theme') || localStorage.getItem('theme') || 'dark';
+      var lang  = p.get('lang')  || localStorage.getItem('lang')
+                  || (navigator.language && navigator.language.toLowerCase().startsWith('fr') ? 'fr' : 'en');
+      localStorage.setItem('theme', theme);
+      localStorage.setItem('lang',  lang);
+      document.documentElement.setAttribute('data-theme', theme);
+      document.documentElement.lang = lang;
+    })();
+  </script>
 </head>
-<body id="body">
-    <div id="title">
-        <h1>FLORENTIN ROBERGE</h1>
-        <h5>Game programmer</h5>
-    </div>
-    <nav class = "sticky-nav" id="nav">
-        <div class="nav-wrapper blue-grey darken-4">
-            <ul class="right hide-on-med-and-down">
-            <li><a href="#presentation" class="waves-effect waves-light btn-large teal lighten-2">Présentation</a></li>
-            <li><a href="#experience" class="waves-effect waves-light btn-large teal lighten-2">Expérience</a></li>
-            <li><a href="portfolio.html" class="waves-effect waves-light btn-large teal lighten-2">Portfolio</a></li>
-            <li><a href="assets/CV - Florentin Roberge.pdf" class="waves-effect waves-light btn-large teal lighten-2">CV</a></li>
-            <li><a href="#contact" class="waves-effect waves-light btn-large teal lighten-2">Contact</a></li>
-            </ul>
-        </div>
+<body>
+
+  <a href="#about" class="skip-link">Aller au contenu</a>
+
+  <!-- ── NAVBAR ── -->
+  <header id="navbar">
+    <nav class="nav-inner">
+      <a href="index.html" class="nav-logo">Florentin<span>.</span></a>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#about"      data-i18n="nav_about">À propos</a></li>
+        <li><a href="#skills"     data-i18n="nav_skills">Compétences</a></li>
+        <li><a href="#experience" data-i18n="nav_exp">Expériences</a></li>
+        <li><a href="portfolio.html" data-i18n="nav_portfolio">Portfolio</a></li>
+        <li><a href="#contact"    data-i18n="nav_contact">Contact</a></li>
+      </ul>
+      <div class="nav-controls">
+        <button id="lang-btn"   class="ctrl-btn" aria-label="Changer la langue">EN</button>
+        <button id="theme-btn"  class="ctrl-btn" aria-label="Changer le thème">☀</button>
+        <button id="nav-toggle" class="ctrl-btn nav-toggle" aria-label="Menu">☰</button>
+      </div>
     </nav>
+  </header>
+
+  <!-- ── HERO ── -->
+  <section id="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-content">
+      <div class="hero-text">
+        <p class="hero-eyebrow mono" data-i18n="hero_eyebrow">Game Developer</p>
+        <h1>Florentin<br><span class="gradient-text">Roberge</span></h1>
+        <p class="hero-title" data-i18n="hero_subtitle">Développeur Gameplay Unity / C#</p>
+        <p class="hero-desc"  data-i18n="hero_desc">6 ans d'expérience · Mobile · VR · Multijoueur · Outils</p>
+        <div class="hero-ctas">
+          <a href="portfolio.html" class="btn btn-primary" data-i18n="hero_cta_portfolio">Voir le Portfolio</a>
+          <a href="SiteReference/CV Professionnel Communication Marketing Minimaliste Moderne Violet.pdf"
+             class="btn btn-outline" target="_blank" data-i18n="hero_cta_cv">Télécharger le CV</a>
+          <a href="#contact" class="btn btn-ghost" data-i18n="hero_cta_contact">Contact</a>
+        </div>
+      </div>
+      <div class="hero-photo-wrap">
+        <div class="hero-photo-ring">
+          <img src="assets/photo.jpg" alt="Florentin Roberge" class="hero-photo">
+        </div>
+      </div>
+    </div>
+    <div class="hero-scroll" aria-hidden="true"><span>↓</span></div>
+  </section>
+
+  <!-- ── ABOUT ── -->
+  <section id="about" class="section">
     <div class="container">
-        <div id="mainpart">
-            <div class="row">
-                <div class="col s8">
-                    <div id="presentation" class="card blue-grey darken-4">
-                        <div class="card-content white-text">
-                            <h2 id="incard">Présentation</h2>
-                            <h5>J'ai commencé à me former seul au lycée et j'ai ensuite rejoint l'école E-artsup après l'obtention du BAC.</h5>
-                            <h5>J’ai très récemment terminé ma formation à E-artup et je suis actuellement activement en recherche d'emploi.</h5>
-                            <h5>Je suis efficace et sérieux dans mon travail, je peux apprendre rapidement un sujet, langage de programmation ou une technique de développement ainsi que créer des nouveaux systèmes à partir de rien pour atteindre un objectif. J'ai de bonnes connaissances en mathématiques et j'aime les appliquer ce qui aide beaucoup dans pas mal de programmes.</h5>
-                            <h5>Je sais travailler en équipe, j'ai travaillé en tout sur une dizaine de projets en équipe et ai été le chef de projet sur 2 d'entre eux dont notre projet de fin de cursus à E-Artsup. J'adore apprendre de nouvelles choses en m'amusant.</h5>
-                            <h5>J'aime particulièrement les jeux qui ont un sens profond, détaillé et parfois cryptique, malgré ça je suis ouvert et j'adore travailler sur n'importe quel type de jeu.</h5>
-                            <h5>Ma motivation principale est de rendre heureux et de faire sourire les personnes qui jouent avec mes créations !</h5>
-                        </div>
-                    </div>
-                </div>
-                <div class="col s4">
-                    <div class="card deep-purple darken-1">
-                        <div class="card-content white-text">
-                            <div class="row valign-wrapper">
-                                <div class="col s6">
-                                    <img src="assets/photo.jpg" alt="" class="circle responsive-img">
-                                </div>
-                                <div class="col s6">
-                                    <h5>Salut!</h5>
-                                </div>
-                            </div>
-                            
-                            <h3>Mes passions</h3>
-                            <h5>- Les jeux vidéos 👾</h5>
-                            <h5>- Le code 🖥️</h5>
-                            <h5>- La musique 🎧</h5>
-                            <h5>- Les animés 👒</h5>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="row">
-                <div class="col s4">
-                    <div class="card deep-purple darken-1">
-                        <div class="card-image white-text little-padding">
-                            <div class="row">
-                                <div class="col s6">
-                                    <div class="hoverable center">
-                                        <img src = "assets/unity-logo.png">
-                                    </div>
-                                </div>
-                                <div class="col s6">
-                                    <div class="hoverable center">
-                                        <img src = "assets/unreal-logo.png">
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col s6">
-                                    <div class="hoverable center">
-                                        <img src = "assets/godot-logo.png">
-                                    </div>
-                                </div>
-                                <div class="col s6">
-                                    <div class="hoverable center">
-                                        <img src = "assets/construct-logo.png">
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col s6">
-                                    <div class="hoverable center">
-                                        <img src = "assets/gamemaker-logo.png">
-                                    </div>
-                                </div>
-                                <div class="col s6">
-                                    <div class="hoverable center">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col s8">
-                    <div id="experience" class="card blue-grey darken-4">
-                        <div class="card-content white-text">
-                            <h2 id="incard">Expérience</h2>
-                            <div class="row">
-                                <div class="col s1">
-                                </div>
-                                <div class="col s5">
-                                    <h3>Logiciels</h3>
-                                    <h5>
-                                        <ul class="collection">
-                                            <li class="collection-item blue-grey darken-2"><i class="material-icons">games</i><b>  Unity</b></li>
-                                            <li class="collection-item blue-grey darken-2"><i class="material-icons">games</i><b>  Unreal Engine</b></li>
-                                            <li class="collection-item blue-grey darken-2"><i class="material-icons">games</i>  Construct</li>
-                                            <li class="collection-item blue-grey darken-2"><i class="material-icons">games</i>  Godot</li>
-                                            <li class="collection-item blue-grey darken-2"><i class="material-icons">games</i>  Game maker studio 2</li>
-                                        </ul>
-                                    </h5>
-                                </div>
-                                <div class="col s1">
-                                </div>
-                                <div class="col s5">
-                                    <h3>Languages</h3>
-                                    <h5>
-                                        <ul class="collection">
-                                            <li class="collection-item blue-grey darken-2"><i class="material-icons">developer_mode</i><b>  C#</b></li>
-                                            <li class="collection-item blue-grey darken-2"><i class="material-icons">developer_mode</i>  Javascript</li>
-                                            <li class="collection-item blue-grey darken-2"><i class="material-icons">developer_mode</i>  HTML 5</li>
-                                            <li class="collection-item blue-grey darken-2"><i class="material-icons">developer_mode</i>  Basic</li>
-                                        </ul>
-                                    </h5>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col s1">
-                                </div>
-                                <h3>En tant que developeur de jeu</h3>
-                            </div>
-                            <div class="row">
-                                <div class="col s1">
-                                </div>
-                                <h5>
-                                <div class="col s5">
-                                    <ul class="collection">
-                                        <li class="collection-item blue-grey darken-2"><i class="material-icons">developer_mode</i>  Game programmer</li>
-                                        <li class="collection-item blue-grey darken-2"><i class="material-icons">videogame_asset</i>  Game designer</li>
-                                        <li class="collection-item blue-grey darken-2"><i class="material-icons">location_city</i>  Level designer</li>
-                                    </ul>
-                                </div>
-                                <div class="col s1">
-                                </div>
-                                <div class="col s5">
-                                    <ul class="collection">
-                                        <li class="collection-item blue-grey darken-2"><i class="material-icons">web</i>  Project Manager</li>
-                                        <li class="collection-item blue-grey darken-2"><i class="material-icons">web</i>  Lead Developer</li>
-                                        <li class="collection-item blue-grey darken-2"><i class="material-icons">store</i>  3D Designer</li>
-                                    </ul>
-                                </div>
-                                </h5>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+      <h2 class="section-title" data-i18n="about_title">À propos</h2>
+      <div class="about-grid">
+        <div class="about-text">
+          <p data-i18n="about_p1">Développeur gameplay Unity / C# avec plus de 6 ans d'expérience, je suis polyvalent et orienté production. J'ai travaillé sur des jeux mobiles AAA, des expériences VR, des prototypes multijoueurs, et des outils de production.</p>
+          <p data-i18n="about_p2">Mon profil se distingue par une combinaison de rigueur technique et de compréhension des besoins de production : gameplay programming, systems design, tool development, optimisation, et intégration graphique.</p>
+          <p data-i18n="about_p3">Passionné de jeux vidéo, de musique electro, d'animés et de défis de programmation, je cherche à rendre heureux les joueurs à travers mes créations.</p>
+          <div class="about-tags">
+            <span class="tag">Unity</span>
+            <span class="tag">C#</span>
+            <span class="tag">Gameplay</span>
+            <span class="tag">Mobile</span>
+            <span class="tag">VR</span>
+            <span class="tag">Tools</span>
+            <span class="tag">VFX</span>
+            <span class="tag">Procedural</span>
+          </div>
         </div>
-    </div>
-
-    <div id="mywork">
-        <div class="container">
-            <div class="row">
-                <div class="col s1">
-                </div>
-                <div class="col s3">
-                    <div class="hoverable">
-                        <a href="assets/CV - Florentin Roberge.pdf" target="_blank">
-                            <div class="card blue-grey darken-1 white-text">
-                                <h3 class="card-content">Mon CV</h3>
-                                <div class="card-image row">
-                                    <div class="col s12">
-                                        <img class="card-image" src = "assets/cv.png">
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-                <div class="col s2">
-                </div>
-                <div class="col s6">
-                    <div class="hoverable">
-                        <a href="portfolio.html">
-                            <div class="card blue-grey darken-1 white-text">
-                                <h2 class="card-content">Mon Portfolio</h2>
-                                <div class="card-image row">
-                                    <div class="col s12">
-                                        <img src = "assets/enigmagic.png">
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                </div>
+        <div class="about-extra">
+          <div class="about-card">
+            <div class="about-card-icon">🎮</div>
+            <div>
+              <h3 data-i18n="about_stat1_title">6+ ans</h3>
+              <p data-i18n="about_stat1_desc">d'expérience Unity</p>
             </div>
+          </div>
+          <div class="about-card">
+            <div class="about-card-icon">🌍</div>
+            <div>
+              <h3 data-i18n="about_stat2_title">International</h3>
+              <p data-i18n="about_stat2_desc">Équipes FR &amp; EN</p>
+            </div>
+          </div>
+          <div class="about-card">
+            <div class="about-card-icon">🚀</div>
+            <div>
+              <h3 data-i18n="about_stat3_title">AAA Mobile</h3>
+              <p data-i18n="about_stat3_desc">Heroes of Mavia</p>
+            </div>
+          </div>
+          <div class="about-card">
+            <div class="about-card-icon">🥽</div>
+            <div>
+              <h3 data-i18n="about_stat4_title">VR</h3>
+              <p data-i18n="about_stat4_desc">Enigmagic × Cyberith</p>
+            </div>
+          </div>
         </div>
+      </div>
     </div>
+  </section>
 
-    <div id="contact">
-        <h2>Contact</h2>
-        <h5>Email : florentin.roberge@gmail.com</h5>
-        <h5>Tel : 07 68 04 90 27</h5>
-        <a href="https://www.linkedin.com/in/florentin-roberge-867ba01b7/"><h5 class="linkcolor">Mon linked-in</h5></a>
+  <!-- ── SKILLS ── -->
+  <section id="skills" class="section section-alt">
+    <div class="container">
+      <h2 class="section-title" data-i18n="skills_title">Compétences</h2>
+      <div class="skills-grid">
+
+        <!-- Engines -->
+        <div class="skill-group">
+          <h3 data-i18n="skills_engines">Moteurs</h3>
+          <div class="skill-icon-row">
+            <div class="skill-icon-item"
+                 data-tooltip="6+ ans · Moteur principal · Gameplay, VFX, tools, mobile, VR, multijoueur">
+              <img src="assets/Logos/unity-logo.png" alt="Unity">
+              <span>Unity</span>
+            </div>
+            <div class="skill-icon-item"
+                 data-tooltip="Niveau intermédiaire · City Destroyer (Chaos System)">
+              <img src="assets/Logos/UE-Icon-2023-Black.png" alt="Unreal Engine" class="skill-icon-ue">
+              <span>Unreal Engine</span>
+            </div>
+            <div class="skill-icon-item"
+                 data-tooltip="Bases · Exploration personnelle · Enseignement chez Studio XP (GDScript)">
+              <img src="assets/Logos/godot-logo.png" alt="Godot">
+              <span>Godot</span>
+            </div>
+            <div class="skill-icon-item"
+                 data-tooltip="Utilisé en enseignement · Studio XP">
+              <img src="assets/Logos/construct-3-logo.png" alt="Construct 3">
+              <span>Construct 3</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Languages -->
+        <div class="skill-group">
+          <h3 data-i18n="skills_languages">Langages</h3>
+          <div class="skill-icon-row">
+            <div class="skill-icon-item"
+                 data-tooltip="Expert · Langage principal sur tous mes projets Unity">
+              <img src="assets/Logos/csharp-logo.png" alt="C#">
+              <span>C#</span>
+            </div>
+            <div class="skill-icon-item"
+                 data-tooltip="Intermédiaire · Outils, pipelines IA, bots Discord">
+              <img src="assets/Logos/python-logo-only.svg" alt="Python">
+              <span>Python</span>
+            </div>
+            <div class="skill-icon-item"
+                 data-tooltip="Modding Minecraft · NeoForge / KubeJS">
+              <img src="assets/Logos/lua-logo.svg" alt="Lua">
+              <span>Lua / KubeJS</span>
+            </div>
+            <div class="skill-icon-item"
+                 data-tooltip="GDScript · Enseignement chez Studio XP · Exploration Godot">
+              <img src="assets/Logos/gdscript-logo.svg" alt="GDScript">
+              <span>GDScript</span>
+            </div>
+            <div class="skill-icon-item"
+                 data-tooltip="Custom shaders, VFX, renderer features sous URP">
+              <img src="assets/Logos/hlsl-logo.svg" alt="HLSL / ShaderGraph">
+              <span>HLSL / ShaderGraph</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Domains -->
+        <div class="skill-group skill-group-wide">
+          <h3 data-i18n="skills_domains">Domaines</h3>
+          <div class="domain-tags">
+            <span class="domain-tag" data-i18n="domain_gameplay">Gameplay Programming</span>
+            <span class="domain-tag" data-i18n="domain_tools">Tool Development</span>
+            <span class="domain-tag" data-i18n="domain_mobile">Optimisation Mobile</span>
+            <span class="domain-tag" data-i18n="domain_vr">Réalité Virtuelle</span>
+            <span class="domain-tag" data-i18n="domain_proc">Génération Procédurale</span>
+            <span class="domain-tag" data-i18n="domain_net">Multijoueur / Réseau</span>
+            <span class="domain-tag" data-i18n="domain_ui">UI/UX</span>
+            <span class="domain-tag" data-i18n="domain_vfx">VFX &amp; Shaders</span>
+            <span class="domain-tag" data-i18n="domain_physic">Physique &amp; Simulations</span>
+            <span class="domain-tag" data-i18n="domain_debug">Debugging &amp; Profiling</span>
+          </div>
+        </div>
+
+        <!-- Tools -->
+        <div class="skill-group">
+          <h3 data-i18n="skills_tools">Outils</h3>
+          <div class="tools-list">
+            <span class="tool-chip">Git</span>
+            <span class="tool-chip">Jira</span>
+            <span class="tool-chip">ShaderGraph</span>
+            <span class="tool-chip">Cinemachine</span>
+            <span class="tool-chip">PurrNet</span>
+            <span class="tool-chip">URP / HDRP</span>
+            <span class="tool-chip">Visual Studio</span>
+            <span class="tool-chip">JetBrains Rider</span>
+            <span class="tool-chip">KubeJS / NeoForge</span>
+          </div>
+        </div>
+
+      </div>
     </div>
-    
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src="M.AutoInit()"></script>
+  </section>
 
+  <!-- ── EXPERIENCE ── -->
+  <section id="experience" class="section">
+    <div class="container">
+      <h2 class="section-title" data-i18n="exp_title">Expériences</h2>
+      <div class="timeline">
+
+        <!-- Freelance -->
+        <div class="timeline-item">
+          <div class="timeline-dot featured"></div>
+          <div class="timeline-content timeline-featured">
+            <div class="timeline-header">
+              <div>
+                <span class="timeline-period">2025 – 2026</span>
+                <h3 data-i18n="exp1_role">Développeur / Prototypage · Jeu Mobile 3D en ligne</h3>
+                <span class="timeline-company" data-i18n="exp1_company">Freelance · Collaboration internationale</span>
+              </div>
+              <div class="timeline-tags">
+                <span class="tag">Unity</span>
+                <span class="tag">Mobile</span>
+                <span class="tag">3D</span>
+                <span class="tag">Multijoueur</span>
+                <span class="tag">PurrNet</span>
+              </div>
+            </div>
+            <p data-i18n="exp1_desc">Contrat avec un indépendant américain pour la création d'un jeu vidéo mobile 3D en ligne de style party game. Seul développeur principal, prise en charge de l'ensemble de la stack Unity : architecture réseau server-authoritative, gameplay, prototypage et base technique.</p>
+            <p class="timeline-highlight" data-i18n="exp1_highlight">Développement solo · Architecture réseau · Style Mario Party · Mobile 3D en ligne</p>
+          </div>
+        </div>
+
+        <!-- Studio XP -->
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <div class="timeline-header">
+              <div>
+                <span class="timeline-period">2024 – Présent</span>
+                <h3>Studio XP</h3>
+                <span class="timeline-company" data-i18n="exp3_role">Formateur — initiation au développement de jeux</span>
+              </div>
+              <div class="timeline-tags">
+                <span class="tag">Pédagogie</span>
+                <span class="tag">Construct</span>
+                <span class="tag">Minecraft</span>
+                <span class="tag">GDScript</span>
+              </div>
+            </div>
+            <p data-i18n="exp3_desc">Initiation des jeunes aux fondamentaux de la création de jeux vidéo, de la logique et des logiciels de développement (Construct, Minecraft). Intervention chez Sercel pour une semaine d'innovation Unity.</p>
+          </div>
+        </div>
+
+        <!-- Skrice Studio -->
+        <div class="timeline-item">
+          <div class="timeline-dot featured"></div>
+          <div class="timeline-content timeline-featured">
+            <div class="timeline-header">
+              <div>
+                <span class="timeline-period">2022 – 2024</span>
+                <h3>Skrice Studio</h3>
+                <span class="timeline-company" data-i18n="exp2_role">Développeur Unity 3D / Tech Artist · Heroes of Mavia</span>
+              </div>
+              <div class="timeline-tags">
+                <span class="tag tag-accent">AAA</span>
+                <span class="tag">Unity</span>
+                <span class="tag">Mobile</span>
+                <span class="tag">VFX</span>
+                <span class="tag">Tools</span>
+              </div>
+            </div>
+            <p data-i18n="exp2_desc">Développement de fonctionnalités de gameplay et d'effets visuels (VFX), intégration graphique, et création d'outils de développement sur mesure pour améliorer les workflows des artistes et des développeurs. Optimisation des processus de production et amélioration de l'expérience utilisateur en collaborant étroitement avec une équipe internationale.</p>
+            <p class="timeline-highlight" data-i18n="exp2_highlight">Gameplay · VFX · Intégration graphique · Outils custom · Équipe internationale</p>
+            <a href="https://heroesofmavia.com" target="_blank" rel="noopener" class="timeline-link" data-i18n="exp_see_project">→ Voir le projet</a>
+          </div>
+        </div>
+
+        <!-- Enigmagic / Cyberith -->
+        <div class="timeline-item">
+          <div class="timeline-dot featured"></div>
+          <div class="timeline-content timeline-featured">
+            <div class="timeline-header">
+              <div>
+                <span class="timeline-period">2021 – 2022</span>
+                <h3>E-Artsup × Cyberith</h3>
+                <span class="timeline-company" data-i18n="exp4_role">Développeur Unity 3D · Lead développeur · Enigmagic</span>
+              </div>
+              <div class="timeline-tags">
+                <span class="tag tag-accent">VR</span>
+                <span class="tag">Unity</span>
+                <span class="tag">Lead Dev</span>
+                <span class="tag">VFX</span>
+              </div>
+            </div>
+            <p data-i18n="exp4_desc">Projet en collaboration entre E-Artsup et Cyberith, 9 mois à temps plein. Supervision d'une équipe de 9 développeurs et artistes. Chef de projet et lead développeur, avec un focus sur les sorts et les interactions du joueur. Compatible avec le walker VR Virtualizer 2 de Cyberith.</p>
+            <p class="timeline-highlight" data-i18n="exp4_highlight">Chef de projet · Lead Dev · Virtualizer 2 · 9 personnes · Sorts &amp; interactions VR</p>
+          </div>
+        </div>
+
+        <!-- Education -->
+        <div class="timeline-item timeline-edu">
+          <div class="timeline-dot edu"></div>
+          <div class="timeline-content">
+            <div class="timeline-header">
+              <div>
+                <span class="timeline-period">2019 – 2022</span>
+                <h3>E-Artsup Nantes</h3>
+                <span class="timeline-company" data-i18n="edu_degree">Bachelor Game &amp; Creative Coding</span>
+              </div>
+            </div>
+            <p data-i18n="edu_desc">Spécialisation en développement de jeux vidéo avec Unity et C#. Game design, level design, UI/UX. Projets en équipe, dont 2 en tant que chef de projet.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── PORTFOLIO PREVIEW ── -->
+  <section id="portfolio-preview" class="section section-alt">
+    <div class="container">
+      <h2 class="section-title" data-i18n="portfolio_title">Portfolio</h2>
+      <p class="section-sub" data-i18n="portfolio_sub">Sélection de projets professionnels et personnels</p>
+      <div class="portfolio-grid">
+
+        <!-- Projet Mobile 3D -->
+        <article class="portfolio-card" data-project="mobile3d" role="button" tabindex="0">
+          <div class="portfolio-card-img">
+            <img src="assets/ProjetMobile3D/ProjetMobile3DEnLigne.png" alt="Jeu Mobile 3D en ligne" loading="lazy">
+            <div class="portfolio-card-overlay">
+              <button class="btn btn-primary" data-i18n="card_details" tabindex="-1">Voir les détails</button>
+            </div>
+          </div>
+          <div class="portfolio-card-info">
+            <div class="portfolio-card-meta">
+              <span class="card-year">2025–2026</span>
+              <span class="card-type" data-i18n="card_pro">Professionnel</span>
+            </div>
+            <h3 data-i18n="exp1_role">Développeur / Prototypage · Jeu Mobile 3D en ligne</h3>
+            <p data-i18n="mobile3d_short">Jeu mobile 3D en ligne · Style party game · Freelance</p>
+            <div class="card-tags">
+              <span class="tag">Unity</span><span class="tag">Mobile</span><span class="tag">3D</span><span class="tag">Multijoueur</span><span class="tag">PurrNet</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Heroes of Mavia -->
+        <article class="portfolio-card" data-project="mavia" role="button" tabindex="0">
+          <div class="portfolio-card-img">
+            <img src="assets/Heroes of Mavia/HeroesOfMaviaMain.png" alt="Heroes of Mavia" loading="lazy">
+            <div class="portfolio-card-overlay">
+              <button class="btn btn-primary" data-i18n="card_details" tabindex="-1">Voir les détails</button>
+            </div>
+          </div>
+          <div class="portfolio-card-info">
+            <div class="portfolio-card-meta">
+              <span class="card-year">2022–2024</span>
+              <span class="card-type" data-i18n="card_pro">Professionnel</span>
+            </div>
+            <h3>Heroes of Mavia</h3>
+            <p data-i18n="mavia_short">Jeu mobile AAA de stratégie · Skrice Studio</p>
+            <div class="card-tags">
+              <span class="tag">Unity</span><span class="tag">Mobile</span><span class="tag">3D</span><span class="tag">AAA</span><span class="tag">VFX</span><span class="tag">Tools</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Enigmagic -->
+        <article class="portfolio-card" data-project="enigmagic" role="button" tabindex="0">
+          <div class="portfolio-card-img">
+            <img src="assets/Enigmagic/EnigmagicMain.png" alt="Enigmagic" loading="lazy">
+            <div class="portfolio-card-overlay">
+              <button class="btn btn-primary" data-i18n="card_details" tabindex="-1">Voir les détails</button>
+            </div>
+          </div>
+          <div class="portfolio-card-info">
+            <div class="portfolio-card-meta">
+              <span class="card-year">2021–2022</span>
+              <span class="card-type" data-i18n="card_pro">Professionnel</span>
+            </div>
+            <h3>Enigmagic</h3>
+            <p data-i18n="enigmagic_short">Escape game VR · E-Artsup × Cyberith</p>
+            <div class="card-tags">
+              <span class="tag">Unity</span><span class="tag">VR</span><span class="tag">3D</span><span class="tag">Lead Dev</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- K-Bot -->
+        <article class="portfolio-card" data-project="kbot" role="button" tabindex="0">
+          <div class="portfolio-card-img">
+            <img src="assets/K-Bot/K-BotMain.png" alt="K-Bot" loading="lazy">
+            <div class="portfolio-card-overlay">
+              <button class="btn btn-primary" data-i18n="card_details" tabindex="-1">Voir les détails</button>
+            </div>
+          </div>
+          <div class="portfolio-card-info">
+            <div class="portfolio-card-meta">
+              <span class="card-year">2021</span>
+              <span class="card-type" data-i18n="card_student">Étudiant</span>
+            </div>
+            <h3>K-Bot</h3>
+            <p data-i18n="kbot_short">Puzzle-platformer 3D · E-Artsup</p>
+            <div class="card-tags">
+              <span class="tag">Unity</span><span class="tag">Gameplay</span><span class="tag">3D</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Planète Procédurale -->
+        <article class="portfolio-card" data-project="planet" role="button" tabindex="0">
+          <div class="portfolio-card-img">
+            <img src="assets/GenerationPlanetProc/planete-proc.png" alt="Planète Procédurale" loading="lazy">
+            <div class="portfolio-card-overlay">
+              <button class="btn btn-primary" data-i18n="card_details" tabindex="-1">Voir les détails</button>
+            </div>
+          </div>
+          <div class="portfolio-card-info">
+            <div class="portfolio-card-meta">
+              <span class="card-year">2021</span>
+              <span class="card-type" data-i18n="card_personal">Personnel</span>
+            </div>
+            <h3 data-i18n="planet_title">Planète Procédurale</h3>
+            <p data-i18n="planet_short">Génération procédurale de planète avec LOD sphérique</p>
+            <div class="card-tags">
+              <span class="tag">Unity</span><span class="tag">3D</span><span class="tag">Procédural</span><span class="tag">LOD</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- City Destroyer -->
+        <article class="portfolio-card" data-project="city" role="button" tabindex="0">
+          <div class="portfolio-card-img">
+            <img src="assets/City Destroyer/city-destroyer.png" alt="City Destroyer" loading="lazy">
+            <div class="portfolio-card-overlay">
+              <button class="btn btn-primary" data-i18n="card_details" tabindex="-1">Voir les détails</button>
+            </div>
+          </div>
+          <div class="portfolio-card-info">
+            <div class="portfolio-card-meta">
+              <span class="card-year">2022</span>
+              <span class="card-type" data-i18n="card_student">Étudiant</span>
+            </div>
+            <h3>City Destroyer</h3>
+            <p data-i18n="city_short">Mecha · Unreal Engine Chaos System</p>
+            <div class="card-tags">
+              <span class="tag">Unreal</span><span class="tag">3D</span><span class="tag">Chaos</span><span class="tag">Destruction</span>
+            </div>
+          </div>
+        </article>
+
+      </div>
+      <div class="portfolio-more">
+        <a href="portfolio.html" class="btn btn-outline" data-i18n="portfolio_more">Voir tous les projets →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── CONTACT ── -->
+  <section id="contact" class="section">
+    <div class="container">
+      <h2 class="section-title" data-i18n="contact_title">Contact</h2>
+      <p class="section-sub" data-i18n="contact_sub">Disponible pour des opportunités en développement gameplay</p>
+      <div class="contact-grid">
+        <div class="contact-links">
+          <a href="mailto:florentin.roberge@gmail.com" class="contact-card">
+            <span class="contact-icon">✉</span>
+            <div>
+              <span class="contact-label" data-i18n="contact_email">Email</span>
+              <span class="contact-value">florentin.roberge@gmail.com</span>
+            </div>
+          </a>
+          <a href="tel:+33768049027" class="contact-card">
+            <span class="contact-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="20" height="20"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 01.99 1.18 2 2 0 013 1h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L7.09 8.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg></span>
+            <div>
+              <span class="contact-label" data-i18n="contact_phone">Téléphone</span>
+              <span class="contact-value">+33 7 68 04 90 27</span>
+            </div>
+          </a>
+          <a href="https://www.linkedin.com/in/florentin-roberge-867ba01b7/" target="_blank" rel="noopener" class="contact-card">
+            <span class="contact-icon">in</span>
+            <div>
+              <span class="contact-label">LinkedIn</span>
+              <span class="contact-value">florentin-roberge</span>
+            </div>
+          </a>
+          <a href="SiteReference/CV Professionnel Communication Marketing Minimaliste Moderne Violet.pdf"
+             target="_blank" class="contact-card">
+            <span class="contact-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="20" height="20"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><line x1="10" y1="9" x2="8" y2="9"/></svg></span>
+            <div>
+              <span class="contact-label">CV</span>
+              <span class="contact-value" data-i18n="contact_cv">Télécharger le CV</span>
+            </div>
+          </a>
+        </div>
+        <div class="contact-availability">
+          <div class="availability-badge">
+            <span class="avail-dot"></span>
+            <span data-i18n="contact_available">Disponible</span>
+          </div>
+          <p data-i18n="contact_location">Basé à Vallet, Loire-Atlantique (44) · Remote OK</p>
+          <a href="mailto:florentin.roberge@gmail.com" class="btn btn-primary btn-large"
+             data-i18n="contact_cta">M'écrire un email</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── FOOTER ── -->
+  <footer class="footer">
+    <p>© 2026 Florentin Roberge · <span data-i18n="footer_made">Fait avec passion</span></p>
+  </footer>
+
+  <!-- ── MODAL ── -->
+  <div id="modal-overlay" class="modal-overlay hidden" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <div class="modal-container">
+      <button class="modal-close" id="modal-close" aria-label="Fermer">✕</button>
+      <div class="modal-gallery" id="modal-gallery">
+        <button class="gallery-nav gallery-prev" id="gallery-prev" aria-label="Image précédente">‹</button>
+        <img id="modal-img" src="" alt="">
+        <button class="gallery-nav gallery-next" id="gallery-next" aria-label="Image suivante">›</button>
+        <div class="gallery-dots" id="gallery-dots"></div>
+      </div>
+      <div class="modal-info">
+        <div class="modal-meta">
+          <span id="modal-year" class="card-year"></span>
+          <span id="modal-type" class="card-type"></span>
+        </div>
+        <h2 id="modal-title"></h2>
+        <div id="modal-tags" class="card-tags"></div>
+        <p id="modal-desc"></p>
+        <ul id="modal-bullets" class="modal-bullets"></ul>
+        <div id="modal-links" class="modal-links"></div>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/main.js"></script>
 </body>
 </html>

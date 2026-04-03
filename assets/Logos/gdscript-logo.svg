@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
+  <!-- Script file body -->
+  <path d="M18 10 L80 10 L110 40 L110 118 L18 118 Z" fill="#3d8fc7" fill-opacity="0.1" stroke="#3d8fc7" stroke-width="5" stroke-linejoin="round"/>
+  <!-- Folded corner -->
+  <path d="M80 10 L110 40 L80 40 Z" fill="#3d8fc7" fill-opacity="0.25" stroke="#3d8fc7" stroke-width="5" stroke-linejoin="round"/>
+  <!-- Code lines -->
+  <line x1="32" y1="56" x2="68" y2="56" stroke="#3d8fc7" stroke-width="4.5" stroke-linecap="round" opacity="0.55"/>
+  <line x1="32" y1="68" x2="86" y2="68" stroke="#3d8fc7" stroke-width="4.5" stroke-linecap="round" opacity="0.35"/>
+  <!-- GD label -->
+  <text x="64" y="100" font-family="'Courier New',Consolas,monospace" font-size="34" font-weight="700" text-anchor="middle" fill="#3d8fc7">GD</text>
+</svg>
