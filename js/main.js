@@ -270,7 +270,7 @@ const projects = {
       fr: ["Développeur principal sur l'ensemble du projet", "Architecture réseau server-authoritative (PurrNet)", "Gameplay mobile 3D en ligne · style party game", "Prototypage et mise en place de la base technique", "Collaboration internationale"],
       en: ["Sole lead developer across the entire project", "Server-authoritative network architecture (PurrNet)", "3D online mobile gameplay · party game style", "Prototyping and technical foundation", "International collaboration"]
     },
-    images: ["assets/ProjetMobile3D/ProjetMobile3DEnLigne.png"],
+    images: ["assets/ProjetMobile3D/ProjetMobile3DEnLigne.webp"],
     links: []
   },
   mavia: {
@@ -288,10 +288,10 @@ const projects = {
       en: ["Gameplay feature development", "Visual effects (VFX) creation", "Graphical integration", "Custom development tools", "Production process optimization", "Collaboration with an international team"]
     },
     images: [
-      "assets/Heroes of Mavia/HeroesOfMaviaMain.png",
-      "assets/Heroes of Mavia/HeroesOfMavia1.png",
-      "assets/Heroes of Mavia/HeroesOfMavia2.png",
-      "assets/Heroes of Mavia/HeroesOfMavia3.png"
+      "assets/Heroes of Mavia/HeroesOfMaviaMain.webp",
+      "assets/Heroes of Mavia/HeroesOfMavia1.webp",
+      "assets/Heroes of Mavia/HeroesOfMavia2.webp",
+      "assets/Heroes of Mavia/HeroesOfMavia3.webp"
     ],
     links: [
       { label: "Trailer", url: "https://www.youtube.com/watch?v=bYmpEeRG-_o" },
@@ -313,14 +313,14 @@ const projects = {
       en: ["Project Manager & Lead Developer", "Spells and player interactions", "VFX and graphical integration", "Virtualizer 2 by Cyberith compatibility", "Coordinating a 9-person team"]
     },
     images: [
-      "assets/Enigmagic/EnigmagicMain.png",
-      "assets/Enigmagic/Enigmagic1.jpg",
-      "assets/Enigmagic/Enigmagic2.jpg",
-      "assets/Enigmagic/Enigmagic3.jpg",
-      "assets/Enigmagic/Enigmagic4.jpg",
-      "assets/Enigmagic/Enigmagic5.jpg",
-      "assets/Enigmagic/testeurVirtualizer2.png",
-      "assets/Enigmagic/Virtualizer-ELITE-2-and-Virtualizer-RD-Kit-VR-Treadmill-comparison.jpg"
+      "assets/Enigmagic/EnigmagicMain.webp",
+      "assets/Enigmagic/Enigmagic1.webp",
+      "assets/Enigmagic/Enigmagic2.webp",
+      "assets/Enigmagic/Enigmagic3.webp",
+      "assets/Enigmagic/Enigmagic4.webp",
+      "assets/Enigmagic/Enigmagic5.webp",
+      "assets/Enigmagic/testeurVirtualizer2.webp",
+      "assets/Enigmagic/Virtualizer-ELITE-2-and-Virtualizer-RD-Kit-VR-Treadmill-comparison.webp"
     ],
     links: [
       { label: "Trailer", url: "https://www.youtube.com/watch?v=GU7NYKMZnUE" }
@@ -337,18 +337,18 @@ const projects = {
       en: "K-Bot is a 3D puzzle-platformer where the goal is to destroy your character to progress. It was produced at the end of 2nd year at E-Artsup. I mainly contributed to creating the character's controls and movements, as well as most of its destruction abilities. I also participated in creating the main level of the game, the factory."
     },
     images: [
-      "assets/K-Bot/K-BotMain.png",
-      "assets/K-Bot/K-Bot1.png",
-      "assets/K-Bot/K-Bot2.png",
-      "assets/K-Bot/K-Bot3.png",
-      "assets/K-Bot/K-Bot4.png",
-      "assets/K-Bot/K-Bot5.png",
-      "assets/K-Bot/K-Bot6.png",
-      "assets/K-Bot/K-Bot7.png",
-      "assets/K-Bot/K-Bot8.png",
-      "assets/K-Bot/K-Bot9.png",
-      "assets/K-Bot/K-Bot10.png",
-      "assets/K-Bot/K-Bot11.png"
+      "assets/K-Bot/K-BotMain.webp",
+      "assets/K-Bot/K-Bot1.webp",
+      "assets/K-Bot/K-Bot2.webp",
+      "assets/K-Bot/K-Bot3.webp",
+      "assets/K-Bot/K-Bot4.webp",
+      "assets/K-Bot/K-Bot5.webp",
+      "assets/K-Bot/K-Bot6.webp",
+      "assets/K-Bot/K-Bot7.webp",
+      "assets/K-Bot/K-Bot8.webp",
+      "assets/K-Bot/K-Bot9.webp",
+      "assets/K-Bot/K-Bot10.webp",
+      "assets/K-Bot/K-Bot11.webp"
     ],
     links: [
       { label: "Trailer", url: "https://www.youtube.com/watch?v=Hg_KA5CRfTE" },
@@ -366,13 +366,13 @@ const projects = {
       en: "I created this project solo, challenging myself to procedurally generate a planet that you can descend to the surface of while maintaining correct quality around the camera. To do this, I created an LOD system that works for spherical space like a planet."
     },
     images: [
-      "assets/GenerationPlanetProc/Planet3.gif",
-      "assets/GenerationPlanetProc/planete-proc.png",
-      "assets/GenerationPlanetProc/Planet1.PNG",
-      "assets/GenerationPlanetProc/Planet2.PNG",
-      "assets/GenerationPlanetProc/Planet4.PNG",
-      "assets/GenerationPlanetProc/Planet5.PNG",
-      "assets/GenerationPlanetProc/Planet6.PNG"
+      "assets/GenerationPlanetProc/Planet3.webp",
+      "assets/GenerationPlanetProc/planete-proc.webp",
+      "assets/GenerationPlanetProc/Planet1.webp",
+      "assets/GenerationPlanetProc/Planet2.webp",
+      "assets/GenerationPlanetProc/Planet4.webp",
+      "assets/GenerationPlanetProc/Planet5.webp",
+      "assets/GenerationPlanetProc/Planet6.webp"
     ],
     links: []
   },
@@ -387,12 +387,12 @@ const projects = {
       en: "This project, which resembles a Minecraft clone, is a project I made to learn how voxel procedural generation works."
     },
     images: [
-      "assets/GenerationProcVoxel/generation-proc.png",
-      "assets/GenerationProcVoxel/procedural1.png",
-      "assets/GenerationProcVoxel/procedural2.PNG",
-      "assets/GenerationProcVoxel/procedural3.PNG",
-      "assets/GenerationProcVoxel/procedural4.PNG",
-      "assets/GenerationProcVoxel/procedural5.PNG"
+      "assets/GenerationProcVoxel/generation-proc.webp",
+      "assets/GenerationProcVoxel/procedural1.webp",
+      "assets/GenerationProcVoxel/procedural2.webp",
+      "assets/GenerationProcVoxel/procedural3.webp",
+      "assets/GenerationProcVoxel/procedural4.webp",
+      "assets/GenerationProcVoxel/procedural5.webp"
     ],
     links: []
   },
@@ -407,10 +407,10 @@ const projects = {
       en: "A mecha project that destroys \"A city\" to improve itself and destroy even more! This is a project I made solo, with the goal of successfully using Unreal Engine's Chaos destruction system."
     },
     images: [
-      "assets/City Destroyer/city-destroyer.png",
-      "assets/City Destroyer/CityDestroyer1.png",
-      "assets/City Destroyer/CityDestroyer2.png",
-      "assets/City Destroyer/CityDestroyer3.png"
+      "assets/City Destroyer/city-destroyer.webp",
+      "assets/City Destroyer/CityDestroyer1.webp",
+      "assets/City Destroyer/CityDestroyer2.webp",
+      "assets/City Destroyer/CityDestroyer3.webp"
     ],
     links: []
   },
@@ -425,12 +425,12 @@ const projects = {
       en: "Sentry Dawn is a game created during Global Game Jam 2020. It's a tower defense where the player must go themselves to build their towers and collect the money that appears on the map."
     },
     images: [
-      "assets/Sentry Dawn/sentry-down.png",
-      "assets/Sentry Dawn/image.png",
-      "assets/Sentry Dawn/image (1).png",
-      "assets/Sentry Dawn/image (2).png",
-      "assets/Sentry Dawn/image (3).png",
-      "assets/Sentry Dawn/image (4).png"
+      "assets/Sentry Dawn/sentry-down.webp",
+      "assets/Sentry Dawn/image.webp",
+      "assets/Sentry Dawn/image (1).webp",
+      "assets/Sentry Dawn/image (2).webp",
+      "assets/Sentry Dawn/image (3).webp",
+      "assets/Sentry Dawn/image (4).webp"
     ],
     links: [
       { label: "Global Game Jam", url: "https://globalgamejam.org/2020/games/sentry-dawn-1" }
@@ -447,12 +447,12 @@ const projects = {
       en: "Memories Uncovered is a game created during Global Game Jam 2021. It features a character searching for their memories in a randomly generated maze while being chased by monsters."
     },
     images: [
-      "assets/MemoriesUncovered/memories-uncovered.png",
-      "assets/MemoriesUncovered/MemoriesUncovered1.png",
-      "assets/MemoriesUncovered/MemoriesUncovered2.png",
-      "assets/MemoriesUncovered/MemoriesUncovered3.png",
-      "assets/MemoriesUncovered/MemoriesUncovered4.png",
-      "assets/MemoriesUncovered/MemoriesUncovered5.png"
+      "assets/MemoriesUncovered/memories-uncovered.webp",
+      "assets/MemoriesUncovered/MemoriesUncovered1.webp",
+      "assets/MemoriesUncovered/MemoriesUncovered2.webp",
+      "assets/MemoriesUncovered/MemoriesUncovered3.webp",
+      "assets/MemoriesUncovered/MemoriesUncovered4.webp",
+      "assets/MemoriesUncovered/MemoriesUncovered5.webp"
     ],
     links: [
       { label: "Global Game Jam", url: "https://globalgamejam.org/2021/games/lost-and-found-memories-uncovered-7" }
@@ -468,7 +468,7 @@ const projects = {
       fr: "Galactic Jumping est un jeu en 2D créé en 3 jours à l'occasion d'un workshop. On contrôle un petit astronaute qui doit s'aider de la gravité des planètes pour atteindre la fin des niveaux !",
       en: "Galactic Jumping is a 2D game created in 3 days during a workshop. You control a little astronaut who must use the gravity of planets to reach the end of the levels!"
     },
-    images: ["assets/GalacticJumping/galactic-jumping.png"],
+    images: ["assets/GalacticJumping/galactic-jumping.webp"],
     links: [
       { label: "Télécharger", url: "https://drive.google.com/file/d/1eDsjPd-umTmEgpn4DTefKdhCMQiAIjsd/view" }
     ]
@@ -484,13 +484,13 @@ const projects = {
       en: "Komrog is a 2D roguelike project made in the first year of school, where the goal is to explore a dungeon while collecting upgrades for your weapon and character until you reach the end of the game."
     },
     images: [
-      "assets/Komrog/komrog.png",
-      "assets/Komrog/image.png",
-      "assets/Komrog/image (1).png",
-      "assets/Komrog/image (2).png",
-      "assets/Komrog/image (3).png",
-      "assets/Komrog/image (4).png",
-      "assets/Komrog/image (5).png"
+      "assets/Komrog/komrog.webp",
+      "assets/Komrog/image.webp",
+      "assets/Komrog/image (1).webp",
+      "assets/Komrog/image (2).webp",
+      "assets/Komrog/image (3).webp",
+      "assets/Komrog/image (4).webp",
+      "assets/Komrog/image (5).webp"
     ],
     links: [
       { label: "Télécharger", url: "https://drive.google.com/file/d/1cLqAv5-75650Bm8FUApQVTyl9aU7JxfX/view" }
@@ -506,7 +506,7 @@ const projects = {
       fr: "Le projet Tron est un jeu réalisé en cours. C'est un jeu de versus en 3D de 2 à 4 joueurs ou l'on contrôle une moto et dans lequel on doit éliminer les autres joueurs en leur passant devant grace à une trainée. On est aussi aidé par des power-up qui se génèrent sur le terrain.",
       en: "The Tron project is a game made in class. It's a 3D versus game for 2 to 4 players where you control a motorcycle and must eliminate other players by crossing in front of them with your trail. You are also helped by power-ups that spawn on the map."
     },
-    images: ["assets/ProjetTron/projet-tron.png"],
+    images: ["assets/ProjetTron/projet-tron.webp"],
     links: []
   }
 };
