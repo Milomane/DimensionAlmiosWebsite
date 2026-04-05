@@ -23,7 +23,7 @@
 </head>
 <body>
 
-  <a href="#about" class="skip-link">Aller au contenu</a>
+  <a href="#about" class="skip-link" data-i18n="skip_link">Aller au contenu</a>
 
   <!-- ── NAVBAR ── -->
   <header id="navbar">
@@ -75,9 +75,9 @@
       <h2 class="section-title" data-i18n="about_title">À propos</h2>
       <div class="about-grid">
         <div class="about-text">
-          <p data-i18n="about_p1">Développeur gameplay Unity / C# avec plus de 6 ans d'expérience, je suis polyvalent et orienté production. J'ai travaillé sur des jeux mobiles AAA, des expériences VR, des prototypes multijoueurs, et des outils de production.</p>
-          <p data-i18n="about_p2">Mon profil se distingue par une combinaison de rigueur technique et de compréhension des besoins de production : gameplay programming, systems design, tool development, optimisation, et intégration graphique.</p>
-          <p data-i18n="about_p3">Passionné de jeux vidéo, de musique electro, d'animés et de défis de programmation, je cherche à rendre heureux les joueurs à travers mes créations.</p>
+          <p data-i18n="about_p1">Développeur Unity / C# depuis plus de 6 ans, je travaille sur des jeux parce que c'est ce qui me passionne — des jeux mobiles AAA à la VR en passant par le multijoueur et les prototypes techniques. Chaque projet m'a appris quelque chose de différent, et c'est exactement ça qui me motive.</p>
+          <p data-i18n="about_p2">Je suis polyvalent par nature : gameplay, intégration graphique, création d'outils, optimisation mobile... J'aime résoudre des problèmes concrets et construire des systèmes solides. J'enseigne aussi la programmation et le game design à des jeunes chez Studio XP — cette expérience m'a appris à expliquer clairement mes choix techniques, une habitude que j'applique autant en code review qu'en échange d'équipe.</p>
+          <p data-i18n="about_p3">Passionné de jeux vidéo, de musique electro et d'animés, j'ai toujours un projet perso qui tourne quelque part dans mon éditeur.</p>
           <div class="about-tags">
             <span class="tag">Unity</span>
             <span class="tag">C#</span>
@@ -134,22 +134,26 @@
           <h3 data-i18n="skills_engines">Moteurs</h3>
           <div class="skill-icon-row">
             <div class="skill-icon-item"
-                 data-tooltip="6+ ans · Moteur principal · Gameplay, VFX, tools, mobile, VR, multijoueur">
+                 data-tooltip="6+ ans · Moteur principal · Gameplay, VFX, tools, mobile, VR, multijoueur"
+                 data-i18n-tooltip="tooltip_unity">
               <img src="assets/Logos/unity-logo.webp" alt="Unity" loading="lazy">
               <span>Unity</span>
             </div>
             <div class="skill-icon-item"
-                 data-tooltip="Niveau intermédiaire · City Destroyer (Chaos System)">
+                 data-tooltip="Niveau intermédiaire · City Destroyer (Chaos System)"
+                 data-i18n-tooltip="tooltip_ue">
               <img src="assets/Logos/UE-Icon-2023-Black.webp" alt="Unreal Engine" class="skill-icon-ue" loading="lazy">
               <span>Unreal Engine</span>
             </div>
             <div class="skill-icon-item"
-                 data-tooltip="Bases · Exploration personnelle · Enseignement chez Studio XP (GDScript)">
+                 data-tooltip="Bases · Exploration personnelle · Enseignement chez Studio XP (GDScript)"
+                 data-i18n-tooltip="tooltip_godot">
               <img src="assets/Logos/godot-logo.webp" alt="Godot" loading="lazy">
               <span>Godot</span>
             </div>
             <div class="skill-icon-item"
-                 data-tooltip="Utilisé en enseignement · Studio XP">
+                 data-tooltip="Utilisé en enseignement · Studio XP"
+                 data-i18n-tooltip="tooltip_construct">
               <img src="assets/Logos/construct-3-logo.webp" alt="Construct 3" loading="lazy">
               <span>Construct 3</span>
             </div>
@@ -161,27 +165,32 @@
           <h3 data-i18n="skills_languages">Langages</h3>
           <div class="skill-icon-row">
             <div class="skill-icon-item"
-                 data-tooltip="Expert · Langage principal sur tous mes projets Unity">
+                 data-tooltip="Expert · Langage principal sur tous mes projets Unity"
+                 data-i18n-tooltip="tooltip_csharp">
               <img src="assets/Logos/csharp-logo.webp" alt="C#" loading="lazy">
               <span>C#</span>
             </div>
             <div class="skill-icon-item"
-                 data-tooltip="Intermédiaire · Outils, pipelines IA, bots Discord">
+                 data-tooltip="Intermédiaire · Outils, pipelines IA, bots Discord"
+                 data-i18n-tooltip="tooltip_python">
               <img src="assets/Logos/python-logo-only.svg" alt="Python">
               <span>Python</span>
             </div>
             <div class="skill-icon-item"
-                 data-tooltip="Modding Minecraft · NeoForge / KubeJS">
+                 data-tooltip="Modding Minecraft · NeoForge / KubeJS"
+                 data-i18n-tooltip="tooltip_lua">
               <img src="assets/Logos/lua-logo.svg" alt="Lua">
               <span>Lua / KubeJS</span>
             </div>
             <div class="skill-icon-item"
-                 data-tooltip="GDScript · Enseignement chez Studio XP · Exploration Godot">
+                 data-tooltip="GDScript · Enseignement chez Studio XP · Exploration Godot"
+                 data-i18n-tooltip="tooltip_gdscript">
               <img src="assets/Logos/gdscript-logo.svg" alt="GDScript">
               <span>GDScript</span>
             </div>
             <div class="skill-icon-item"
-                 data-tooltip="Custom shaders, VFX, renderer features sous URP">
+                 data-tooltip="Custom shaders, VFX, renderer features sous URP"
+                 data-i18n-tooltip="tooltip_hlsl">
               <img src="assets/Logos/hlsl-logo.svg" alt="HLSL / ShaderGraph">
               <span>HLSL / ShaderGraph</span>
             </div>
@@ -260,12 +269,12 @@
           <div class="timeline-content">
             <div class="timeline-header">
               <div>
-                <span class="timeline-period">2024 – Présent</span>
+                <span class="timeline-period">2024 – <span data-i18n="timeline_present">Présent</span></span>
                 <h3>Studio XP</h3>
                 <span class="timeline-company" data-i18n="exp3_role">Formateur — initiation au développement de jeux</span>
               </div>
               <div class="timeline-tags">
-                <span class="tag">Pédagogie</span>
+                <span class="tag" data-i18n="tag_teaching">Pédagogie</span>
                 <span class="tag">Construct</span>
                 <span class="tag">Minecraft</span>
                 <span class="tag">GDScript</span>
@@ -293,7 +302,7 @@
                 <span class="tag">Tools</span>
               </div>
             </div>
-            <p data-i18n="exp2_desc">Développement de fonctionnalités de gameplay et d'effets visuels (VFX), intégration graphique, et création d'outils de développement sur mesure pour améliorer les workflows des artistes et des développeurs. Optimisation des processus de production et amélioration de l'expérience utilisateur en collaborant étroitement avec une équipe internationale.</p>
+            <p data-i18n="exp2_desc">Développement de fonctionnalités gameplay et d'effets visuels (VFX), intégration graphique, et création d'outils sur mesure pour les workflows artistes et développeurs. Optimisation de la production au sein d'une équipe internationale.</p>
             <p class="timeline-highlight" data-i18n="exp2_highlight">Gameplay · VFX · Intégration graphique · Outils custom · Équipe internationale</p>
             <a href="https://heroesofmavia.com" target="_blank" rel="noopener" class="timeline-link" data-i18n="exp_see_project">→ Voir le projet</a>
           </div>
@@ -532,7 +541,7 @@
 
   <!-- ── FOOTER ── -->
   <footer class="footer">
-    <p>© 2026 Florentin Roberge · <span data-i18n="footer_made">Fait avec passion</span> · <span style="opacity:0.35;font-size:0.75em;">v2.2</span></p>
+    <p>© 2026 Florentin Roberge · <span data-i18n="footer_made">Fait avec passion</span> · <span style="opacity:0.35;font-size:0.75em;">v2.3</span></p>
   </footer>
 
   <!-- ── MODAL ── -->

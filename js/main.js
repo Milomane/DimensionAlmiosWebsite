@@ -23,8 +23,8 @@ const i18n = {
 
     about_title:     "À propos",
     about_p1:        "Développeur Unity / C# depuis plus de 6 ans, je travaille sur des jeux parce que c'est ce qui me passionne — des jeux mobiles AAA à la VR en passant par le multijoueur et les prototypes techniques. Chaque projet m'a appris quelque chose de différent, et c'est exactement ça qui me motive.",
-    about_p2:        "Je suis polyvalent par nature : gameplay, intégration graphique, création d'outils, optimisation mobile... J'aime résoudre des problèmes concrets et construire des systèmes solides. J'enseigne aussi la programmation et le game design à des jeunes chez Studio XP — cette expérience m'a appris à structurer et expliquer clairement mes choix techniques, ce que je mets autant à profit en équipe qu'en code review. Si vous cherchez quelqu'un qui sait développer ET partager sa vision technique, je suis là pour ça.",
-    about_p3:        "Jeux vidéo, musique electro, animés — et des projets perso qui tournent en permanence dans mon éditeur.",
+    about_p2:        "Je suis polyvalent par nature : gameplay, intégration graphique, création d'outils, optimisation mobile... J'aime résoudre des problèmes concrets et construire des systèmes solides. J'enseigne aussi la programmation et le game design à des jeunes chez Studio XP — cette expérience m'a appris à expliquer clairement mes choix techniques, une habitude que j'applique autant en code review qu'en échange d'équipe.",
+    about_p3:        "Passionné de jeux vidéo, de musique electro et d'animés, j'ai toujours un projet perso qui tourne quelque part dans mon éditeur.",
     about_stat1_title: "6+ ans",
     about_stat1_desc:  "d'expérience Unity",
     about_stat2_title: "International",
@@ -57,7 +57,7 @@ const i18n = {
     exp1_desc:       "Contrat avec un indépendant américain pour la création d'un jeu vidéo mobile 3D en ligne de style party game. Seul développeur principal, prise en charge de l'ensemble de la stack Unity : architecture réseau server-authoritative, gameplay, prototypage et base technique.",
     exp1_highlight:  "Développement solo · Architecture réseau · Style Mario Party · Mobile 3D en ligne",
     exp2_role:       "Développeur Unity 3D / Tech Artist · Heroes of Mavia",
-    exp2_desc:       "Développement de fonctionnalités de gameplay et d'effets visuels (VFX), intégration graphique, et création d'outils de développement sur mesure pour améliorer les workflows des artistes et des développeurs. Optimisation des processus de production et amélioration de l'expérience utilisateur en collaborant étroitement avec une équipe internationale.",
+    exp2_desc:       "Développement de fonctionnalités gameplay et d'effets visuels (VFX), intégration graphique, et création d'outils sur mesure pour les workflows artistes et développeurs. Optimisation de la production au sein d'une équipe internationale.",
     exp2_highlight:  "Gameplay · VFX · Intégration graphique · Outils custom · Équipe internationale",
     exp3_role:       "Formateur — initiation au développement de jeux",
     exp3_desc:       "Initiation des jeunes aux fondamentaux de la création de jeux vidéo, de la logique et des logiciels de développement (Construct, Minecraft). Intervention chez Sercel pour une semaine d'innovation Unity.",
@@ -128,6 +128,34 @@ const i18n = {
     pf_ld_zelda:       "Level Design · Donjon Zelda Wind Waker",
     pf_ld_zelda_desc:  "Conception d'un donjon théorique de Zelda Wind Waker (3ème donjon), plans et réalisation 3D.",
     back_home:         "← Retour à l'accueil",
+
+    skip_link:         "Aller au contenu",
+    timeline_present:  "Présent",
+    tag_teaching:      "Pédagogie",
+    tag_maze:          "Labyrinthe",
+    tag_gravity:       "Gravité",
+    tag_multiplayer:   "Multijoueur",
+
+    vfx_fire:          "Feu",
+    vfx_ice:           "Glace",
+    vfx_wall:          "Mur",
+    vfx_pillar:        "Pilier",
+    vfx_electricity:   "Électricité",
+    vfx_explosion:     "Explosion",
+    vfx_heal:          "Soin",
+    vfx_shader:        "Shader",
+    vfx_magic:         "Magie",
+    vfx_firefly:       "Luciole",
+
+    tooltip_unity:     "6+ ans · Moteur principal · Gameplay, VFX, tools, mobile, VR, multijoueur",
+    tooltip_ue:        "Niveau intermédiaire · City Destroyer (Chaos System)",
+    tooltip_godot:     "Bases · Exploration personnelle · Enseignement chez Studio XP (GDScript)",
+    tooltip_construct: "Utilisé en enseignement · Studio XP",
+    tooltip_csharp:    "Expert · Langage principal sur tous mes projets Unity",
+    tooltip_python:    "Intermédiaire · Outils, pipelines IA, bots Discord",
+    tooltip_lua:       "Modding Minecraft · NeoForge / KubeJS",
+    tooltip_gdscript:  "GDScript · Enseignement chez Studio XP · Exploration Godot",
+    tooltip_hlsl:      "Custom shaders, VFX, renderer features sous URP",
   },
 
   en: {
@@ -146,8 +174,8 @@ const i18n = {
 
     about_title:     "About",
     about_p1:        "I've been a Unity / C# developer for over 6 years — working on games because it's what I genuinely love. From AAA mobile to VR and online multiplayer prototypes, every project has taught me something different, and that's exactly what keeps me going.",
-    about_p2:        "I'm versatile by nature: gameplay, graphical integration, tool development, mobile optimization... I enjoy solving concrete problems and building solid systems. I also teach programming and game design to young learners at Studio XP — that experience has sharpened my ability to structure and explain technical decisions clearly, something I bring just as much to team discussions and code reviews as to the code itself. If you're looking for someone who can both build and share a technical vision, I'm here for that.",
-    about_p3:        "Video games, electronic music, anime — and personal projects always running somewhere in my editor.",
+    about_p2:        "I'm versatile by nature: gameplay, graphical integration, tool development, mobile optimization... I enjoy solving concrete problems and building solid systems. I also teach programming and game design at Studio XP — it's trained me to explain technical decisions clearly, a habit I carry into team discussions and code reviews.",
+    about_p3:        "Into video games, electronic music and anime — there's always a personal project running somewhere in my editor.",
     about_stat1_title: "6+ years",
     about_stat1_desc:  "Unity experience",
     about_stat2_title: "International",
@@ -180,7 +208,7 @@ const i18n = {
     exp1_desc:       "Contract with an American independent developer to create a 3D online mobile party game. Sole lead developer, responsible for the entire Unity stack: server-authoritative network architecture, gameplay, prototyping, and technical foundation.",
     exp1_highlight:  "Solo development · Network architecture · Mario Party style · 3D online mobile",
     exp2_role:       "Unity 3D Developer / Tech Artist · Heroes of Mavia",
-    exp2_desc:       "Gameplay feature and visual effects (VFX) development, graphical integration, and creation of custom development tools to improve artist and developer workflows. Optimized production processes and user experience while collaborating closely with an international team.",
+    exp2_desc:       "Gameplay feature and visual effects (VFX) development, graphical integration, and custom tool creation for artist and developer workflows. Optimized production within an international team.",
     exp2_highlight:  "Gameplay · VFX · Graphical integration · Custom tools · International team",
     exp3_role:       "Instructor — game development fundamentals",
     exp3_desc:       "Teaching young people the fundamentals of game creation, logic, and development tools (Construct, Minecraft). Intervention at Sercel for a Unity innovation week.",
@@ -251,6 +279,34 @@ const i18n = {
     pf_ld_zelda:       "Level Design · Zelda Wind Waker Dungeon",
     pf_ld_zelda_desc:  "Theoretical Zelda Wind Waker dungeon (3rd dungeon) with floor plans and 3D realization.",
     back_home:         "← Back to home",
+
+    skip_link:         "Skip to content",
+    timeline_present:  "Present",
+    tag_teaching:      "Teaching",
+    tag_maze:          "Maze",
+    tag_gravity:       "Gravity",
+    tag_multiplayer:   "Multiplayer",
+
+    vfx_fire:          "Fire",
+    vfx_ice:           "Ice",
+    vfx_wall:          "Wall",
+    vfx_pillar:        "Pillar",
+    vfx_electricity:   "Electricity",
+    vfx_explosion:     "Explosion",
+    vfx_heal:          "Heal",
+    vfx_shader:        "Shader",
+    vfx_magic:         "Magic",
+    vfx_firefly:       "Firefly",
+
+    tooltip_unity:     "6+ years · Main engine · Gameplay, VFX, tools, mobile, VR, multiplayer",
+    tooltip_ue:        "Intermediate level · City Destroyer (Chaos System)",
+    tooltip_godot:     "Basics · Personal exploration · Teaching at Studio XP (GDScript)",
+    tooltip_construct: "Used for teaching · Studio XP",
+    tooltip_csharp:    "Expert · Primary language across all my Unity projects",
+    tooltip_python:    "Intermediate · Tools, AI pipelines, Discord bots",
+    tooltip_lua:       "Minecraft modding · NeoForge / KubeJS",
+    tooltip_gdscript:  "GDScript · Teaching at Studio XP · Godot exploration",
+    tooltip_hlsl:      "Custom shaders, VFX, renderer features under URP",
   }
 };
 
@@ -280,8 +336,8 @@ const projects = {
     tags: ["Unity", "Mobile", "3D", "AAA", "Gameplay", "VFX", "Tools", "C#", "International"],
     categories: ["pro", "unity"],
     desc: {
-      fr: "Jeu mobile AAA de stratégie en temps réel. Mon rôle sur ce projet a été le développement de fonctionnalités de gameplay et d'effets visuels (VFX), intégration graphique, et création d'outils de développement sur mesure pour améliorer les workflows des artistes et des développeurs. J'ai travaillé à l'optimisation des processus de production et à l'amélioration de l'expérience utilisateur en collaborant étroitement avec une équipe internationale.",
-      en: "AAA real-time strategy mobile game. My role on this project was the development of gameplay features and visual effects (VFX), graphical integration, and creation of custom development tools to improve artist and developer workflows. I worked on optimizing production processes and improving user experience while collaborating closely with an international team."
+      fr: "Jeu mobile AAA de stratégie en temps réel. Développement de fonctionnalités gameplay et d'effets visuels (VFX), intégration graphique, et création d'outils sur mesure pour les workflows artistes et développeurs. Optimisation de la production au sein d'une équipe internationale.",
+      en: "AAA real-time strategy mobile game. Gameplay feature and visual effects (VFX) development, graphical integration, and custom tool creation for artist and developer workflows. Optimized production within an international team."
     },
     bullets: {
       fr: ["Développement de fonctionnalités de gameplay", "Création d'effets visuels (VFX)", "Intégration graphique", "Outils de développement sur mesure", "Optimisation des processus de production", "Collaboration avec une équipe internationale"],
@@ -582,6 +638,10 @@ function applyLang(lang) {
   document.querySelectorAll('[data-i18n]').forEach(el => {
     const key = el.dataset.i18n;
     if (t[key] !== undefined) el.textContent = t[key];
+  });
+  document.querySelectorAll('[data-i18n-tooltip]').forEach(el => {
+    const key = el.dataset.i18nTooltip;
+    if (t[key] !== undefined) el.dataset.tooltip = t[key];
   });
   const btn = document.getElementById('lang-btn');
   if (btn) btn.textContent = lang === 'fr' ? 'EN' : 'FR';
