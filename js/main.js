@@ -16,7 +16,7 @@ const i18n = {
 
     hero_eyebrow:    "Game Developer",
     hero_subtitle:   "Développeur Gameplay Unity / Godot / C#",
-    hero_desc:       "6 ans d'expérience · Mobile · VR · Multijoueur · Outils",
+    hero_desc:       "6 ans d'expérience · Mobile · VR · Multijoueur · Modding · Outils",
     hero_cta_portfolio: "Voir le Portfolio",
     hero_cta_cv:     "Télécharger le CV",
     hero_cta_contact:"Contact",
@@ -155,6 +155,7 @@ const i18n = {
     tag_maze:          "Labyrinthe",
     tag_gravity:       "Gravité",
     tag_multiplayer:   "Multijoueur",
+    tag_procedural:    "Procédural",
 
     vfx_fire:          "Feu",
     vfx_ice:           "Glace",
@@ -187,7 +188,7 @@ const i18n = {
 
     hero_eyebrow:    "Game Developer",
     hero_subtitle:   "Unity / Godot / C# Gameplay Developer",
-    hero_desc:       "6 years experience · Mobile · VR · Multiplayer · Tools",
+    hero_desc:       "6 years experience · Mobile · VR · Multiplayer · Modding · Tools",
     hero_cta_portfolio: "View Portfolio",
     hero_cta_cv:     "Download CV",
     hero_cta_contact:"Contact",
@@ -231,7 +232,7 @@ const i18n = {
     exp2_desc:       "Gameplay feature and visual effects (VFX) development, graphical integration, and custom tool creation for artist and developer workflows. Optimized production within an international team.",
     exp2_highlight:  "Gameplay · VFX · Graphical integration · Custom tools · International team",
     exp3_role:       "Instructor — game development fundamentals",
-    exp3_desc:       "Teaching young people the fundamentals of game creation, logic, and development tools (Construct, Minecraft). Intervention at Sercel for a Unity innovation week.",
+    exp3_desc:       "Teaching young people the fundamentals of game creation, logic, and development tools (Construct, Minecraft). Ran a Unity innovation week at Sercel.",
     exp4_role:       "Unity 3D Developer · Lead Developer · Enigmagic",
     exp4_desc:       "Collaborative project between E-Artsup and Cyberith, 9 months full-time. Supervised a team of 9 developers and artists. Project manager and lead developer, focused on spells and player interactions. Compatible with the Virtualizer 2 VR walker by Cyberith.",
     exp4_highlight:  "Project Manager · Lead Dev · Virtualizer 2 · 9 people · VR spells & interactions",
@@ -309,7 +310,7 @@ const i18n = {
     pf_filter_vfx:     "VFX",
     pf_filter_ld:      "Level Design",
     pf_ld_title:       "Level Design",
-    pf_ld_sub:         "Here are some level designs I created for projects I worked on, or simply for practice.",
+    pf_ld_sub:         "Here are some level designs of mine, from projects I worked on or simply things I built for fun.",
     pf_ld_kbot:        "Level Design · K-Bot",
     pf_ld_kbot_desc:   "K-Bot level plans before 3D construction.",
     pf_ld_proc:        "Level Design · Procedural Generation",
@@ -326,6 +327,7 @@ const i18n = {
     tag_maze:          "Maze",
     tag_gravity:       "Gravity",
     tag_multiplayer:   "Multiplayer",
+    tag_procedural:    "Procedural",
 
     vfx_fire:          "Fire",
     vfx_ice:           "Ice",
@@ -356,7 +358,7 @@ const projects = {
     title: { fr: "Jeu Mobile 3D en ligne", en: "3D Online Mobile Game" },
     year: "2025–2026",
     type: { fr: "Professionnel", en: "Professional" },
-    tags: ["Unity", "Mobile", "3D", "Multijoueur", "PurrNet", "Party Game"],
+    tags: ["Unity", "Mobile", "3D", { fr: "Multijoueur", en: "Multiplayer" }, "PurrNet", "Party Game"],
     categories: ["pro", "unity"],
     desc: {
       fr: "Contrat avec un indépendant américain pour la création d'un jeu vidéo mobile 3D en ligne de style party game. En tant que développeur principal, j'ai pris en charge l'ensemble de la stack Unity : architecture réseau server-authoritative, mécaniques de gameplay, prototypage et base technique.",
@@ -499,7 +501,7 @@ const projects = {
     title: { fr: "Planète Procédurale", en: "Procedural Planet" },
     year: "2021",
     type: { fr: "Personnel", en: "Personal" },
-    tags: ["Unity", "C#", "3D", "Procedural", "LOD", "Solo"],
+    tags: ["Unity", "C#", "3D", { fr: "Procédural",  en: "Procedural" }, "LOD", "Solo"],
     categories: ["unity", "proc"],
     desc: {
       fr: "J'ai réalisé ce projet seul en me mettant au défi de générer une planète procéduralement et que l'on puisse descendre à sa surface tout en gardant une qualité correcte autour de la caméra. Pour ce faire, j'ai donc créé un système de LOD qui fonctionne pour un espace comme une planète.",
@@ -520,7 +522,7 @@ const projects = {
     title: { fr: "Génération Procédurale Voxel", en: "Procedural Voxel Generation" },
     year: "2020",
     type: { fr: "Personnel", en: "Personal" },
-    tags: ["Unity", "C#", "3D", "Voxel", "Procedural", "Marching Cubes", "Solo"],
+    tags: ["Unity", "C#", "3D", "Voxel", { fr: "Procédural",  en: "Procedural" }, "Marching Cubes", "Solo"],
     categories: ["unity", "proc"],
     desc: {
       fr: "Ce projet qui ressemble au clone de Minecraft est un projet que j'ai réalisé dans le but d'apprendre le fonctionnement de la génération procédurale en voxel.",
@@ -580,7 +582,7 @@ const projects = {
     title: "Memories Uncovered",
     year: "GGJ 2021",
     type: { fr: "Game Jam", en: "Game Jam" },
-    tags: ["Unity", "C#", "Maze", "Horror", "Jam"],
+    tags: ["Unity", "C#", { fr: "Labyrinthe",  en: "Maze" }, "Horror", "Jam"],
     categories: ["unity", "jam"],
     desc: {
       fr: "Memories Uncovered est un jeu créé lors de la Global Game jam 2021, elle met en scène un personnage qui cherche ses souvenirs dans un labyrinthe généré aléatoirement alors qu'il est poursuivi par des monstres.",
@@ -602,7 +604,7 @@ const projects = {
     title: "Galactic Jumping",
     year: "2020",
     type: { fr: "Étudiant", en: "Student" },
-    tags: ["Unity", "C#", "2D", "Gravity", "Workshop"],
+    tags: ["Unity", "C#", "2D", { fr: "Gravité",     en: "Gravity" }, "Workshop"],
     categories: ["unity"],
     desc: {
       fr: "Galactic Jumping est un jeu en 2D créé en 3 jours à l'occasion d'un workshop. On contrôle un petit astronaute qui doit s'aider de la gravité des planètes pour atteindre la fin des niveaux !",
@@ -640,7 +642,7 @@ const projects = {
     title: "Projet Tron",
     year: "2020–2021",
     type: { fr: "Étudiant", en: "Student" },
-    tags: ["Unity", "C#", "Multiplayer", "3D", "Versus"],
+    tags: ["Unity", "C#", { fr: "Multijoueur", en: "Multiplayer" }, "3D", "Versus"],
     categories: ["unity"],
     desc: {
       fr: "Le projet Tron est un jeu réalisé en cours. C'est un jeu de versus en 3D de 2 à 4 joueurs ou l'on contrôle une moto et dans lequel on doit éliminer les autres joueurs en leur passant devant grace à une trainée. On est aussi aidé par des power-up qui se génèrent sur le terrain.",
@@ -786,7 +788,9 @@ function openModal(id) {
   (p.tags || []).forEach(tag => {
     const s = document.createElement('span');
     s.className = 'tag';
-    s.textContent = tag;
+    /* Most tags are language-neutral technical labels; the few that are
+       actual words carry a { fr, en } pair instead. */
+    s.textContent = (tag && typeof tag === 'object') ? tag[currentLang] : tag;
     tagsEl.appendChild(s);
   });
 

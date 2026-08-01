@@ -913,6 +913,14 @@ p  { color: var(--text-2); }
   margin-top: 48px;
 }
 
+/* With an odd card count the last row can end up with a single item stuck
+   on the left. Centre it, but only in the 3-column layout. */
+@media (min-width: 901px) {
+  .portfolio-grid > .portfolio-card:last-child:nth-child(3n + 1) {
+    grid-column: 2;
+  }
+}
+
 @media (max-width: 900px) {
   .portfolio-grid {
     grid-template-columns: repeat(2, 1fr);
