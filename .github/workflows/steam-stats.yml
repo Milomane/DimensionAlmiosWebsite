@@ -1,0 +1,40 @@
+name: Update Steam Workshop stats
+
+on:
+  schedule:
+    # Every 6 hours. GitHub queues cron jobs, so the exact minute drifts.
+    - cron: '0 */6 * * *'
+  workflow_dispatch:
+
+# Needed to push the refreshed JSON back to the branch.
+permissions:
+  contents: write
+
+concurrency:
+  group: steam-stats
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Fetch Workshop counters
+        run: node scripts/fetch-steam-stats.mjs
+
+      - name: Commit if the numbers moved
+        run: |
+          if git diff --quiet -- assets/steam-stats.json; then
+            echo "No change, nothing to commit."
+            exit 0
+          fi
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add assets/steam-stats.json
+          git commit -m "chore: refresh Steam Workshop stats"
+          git push

@@ -15,7 +15,7 @@ const i18n = {
     nav_contact:     "Contact",
 
     hero_eyebrow:    "Game Developer",
-    hero_subtitle:   "Développeur Gameplay Unity / C#",
+    hero_subtitle:   "Développeur Gameplay Unity / Godot / C#",
     hero_desc:       "6 ans d'expérience · Mobile · VR · Multijoueur · Outils",
     hero_cta_portfolio: "Voir le Portfolio",
     hero_cta_cv:     "Télécharger le CV",
@@ -64,6 +64,11 @@ const i18n = {
     exp4_role:       "Développeur Unity 3D · Lead développeur · Enigmagic",
     exp4_desc:       "Projet en collaboration entre E-Artsup et Cyberith, 9 mois à temps plein. Supervision d'une équipe de 9 développeurs et artistes. Chef de projet et lead développeur, avec un focus sur les sorts et les interactions du joueur. Compatible avec le walker VR Virtualizer 2 de Cyberith.",
     exp4_highlight:  "Chef de projet · Lead Dev · Virtualizer 2 · 9 personnes · Sorts & interactions VR",
+    exp5_role:       "Level design & modding · Meccha Chameleon",
+    exp5_company:    "Projet personnel · Steam Workshop",
+    exp5_desc:       "Conception et publication de maps pour Meccha Chameleon sous Unreal Engine : recréations de zones emblématiques de Zelda (Clock Town, Kakariko Village, Kokiri Forest) adaptées en terrains de jeu pour un hide & seek multijoueur. Systèmes modulaires d'activation de zones, musique paramétrable et sauvegarde des réglages, optimisation et correction des collisions au fil des retours de la communauté.",
+    exp5_highlight:  "1,1 M+ d'abonnements cumulés · 2 000+ évaluations · 4 maps publiées · Retours communauté",
+    exp5_link:       "→ Voir les mods",
     exp_see_project: "→ Voir le projet",
     edu_degree:      "Bachelor Game & Creative Coding",
     edu_desc:        "Spécialisation en développement de jeux vidéo avec Unity et C#. Game design, level design, UI/UX. Projets en équipe, dont 2 en tant que chef de projet.",
@@ -92,6 +97,20 @@ const i18n = {
     galactic_short:  "Jeu 2D gravité planétaire · Workshop 3 jours",
     komrog_short:    "Roguelike 2D · Première année E-Artsup",
     tron_short:      "Versus 3D · 2 à 4 joueurs · Moto + traînée",
+    meccha_short:    "Maps Zelda sur Steam Workshop · Unreal Engine",
+
+    mod_eyebrow:     "Modding · Unreal Engine",
+    mod_title:       "Mes mods Meccha Chameleon",
+    mod_sub:         "Recréations de zones cultes de Zelda en maps jouables, publiées sur le Steam Workshop, plus d'un million de téléchargements cumulés.",
+    mod_stat_subs:   "abonnements cumulés",
+    mod_stat_ratings:"évaluations Steam",
+    mod_stat_score:  "note sur chaque map",
+    mod_stat_maps:   "maps publiées",
+    mod_card_btn:    "Voir sur le Workshop",
+    mod_updated:     "Compteurs synchronisés avec le Steam Workshop",
+    mod_updated_now: "à l'instant",
+    mod_cta:         "Voir tous mes mods sur le Workshop →",
+    mod_note:        "Le total cumulé inclut une première version de Kokiri Forest (270 K+ abonnés), depuis remplacée par la version mise à jour.",
 
     vfx_title:  "VFX",
     vfx_sub:    "Quelques aperçus de VFX réalisés sur mes projets",
@@ -115,6 +134,7 @@ const i18n = {
     pf_filter_vr:      "VR",
     pf_filter_proc:    "Procédural",
     pf_filter_jam:     "Game Jam",
+    pf_filter_modding: "Modding",
     pf_filter_vfx:     "VFX",
     pf_filter_ld:      "Level Design",
     pf_ld_title:       "Level Design",
@@ -148,7 +168,7 @@ const i18n = {
     vfx_firefly:       "Luciole",
 
     tooltip_unity:     "6+ ans · Moteur principal · Gameplay, VFX, tools, mobile, VR, multijoueur",
-    tooltip_ue:        "Niveau intermédiaire · City Destroyer (Chaos System)",
+    tooltip_ue:        "Level design & modding · Maps Meccha Chameleon (1,1 M+ d'abonnements) · City Destroyer (Chaos System)",
     tooltip_godot:     "Bases · Exploration personnelle · Enseignement chez Studio XP (GDScript)",
     tooltip_construct: "Utilisé en enseignement · Studio XP",
     tooltip_csharp:    "Expert · Langage principal sur tous mes projets Unity",
@@ -166,7 +186,7 @@ const i18n = {
     nav_contact:     "Contact",
 
     hero_eyebrow:    "Game Developer",
-    hero_subtitle:   "Unity / C# Gameplay Developer",
+    hero_subtitle:   "Unity / Godot / C# Gameplay Developer",
     hero_desc:       "6 years experience · Mobile · VR · Multiplayer · Tools",
     hero_cta_portfolio: "View Portfolio",
     hero_cta_cv:     "Download CV",
@@ -215,6 +235,11 @@ const i18n = {
     exp4_role:       "Unity 3D Developer · Lead Developer · Enigmagic",
     exp4_desc:       "Collaborative project between E-Artsup and Cyberith, 9 months full-time. Supervised a team of 9 developers and artists. Project manager and lead developer, focused on spells and player interactions. Compatible with the Virtualizer 2 VR walker by Cyberith.",
     exp4_highlight:  "Project Manager · Lead Dev · Virtualizer 2 · 9 people · VR spells & interactions",
+    exp5_role:       "Level design & modding · Meccha Chameleon",
+    exp5_company:    "Personal project · Steam Workshop",
+    exp5_desc:       "Designing and publishing maps for Meccha Chameleon in Unreal Engine: recreations of iconic Zelda areas (Clock Town, Kakariko Village, Kokiri Forest) adapted into playgrounds for multiplayer hide & seek. Modular area toggling systems, configurable music with saved settings, optimization and collision fixes driven by community feedback.",
+    exp5_highlight:  "1.1M+ cumulative subscribers · 2,000+ ratings · 4 published maps · Community feedback",
+    exp5_link:       "→ See the mods",
     exp_see_project: "→ See project",
     edu_degree:      "Bachelor in Game & Creative Coding",
     edu_desc:        "Specialization in game development with Unity and C#. Game design, level design, UI/UX. Team projects, 2 as project manager.",
@@ -243,6 +268,20 @@ const i18n = {
     galactic_short:  "2D planetary gravity game · 3-day workshop",
     komrog_short:    "2D roguelike · First year at E-Artsup",
     tron_short:      "3D versus · 2 to 4 players · Motorcycle + trail",
+    meccha_short:    "Zelda maps on Steam Workshop · Unreal Engine",
+
+    mod_eyebrow:     "Modding · Unreal Engine",
+    mod_title:       "My Meccha Chameleon mods",
+    mod_sub:         "Recreations of iconic Zelda areas as playable maps, published on the Steam Workshop, over a million cumulative downloads.",
+    mod_stat_subs:   "cumulative subscribers",
+    mod_stat_ratings:"Steam ratings",
+    mod_stat_score:  "rating on every map",
+    mod_stat_maps:   "published maps",
+    mod_card_btn:    "View on the Workshop",
+    mod_updated:     "Counters synced with the Steam Workshop",
+    mod_updated_now: "just now",
+    mod_cta:         "See all my mods on the Workshop →",
+    mod_note:        "The cumulative total includes an earlier version of Kokiri Forest (270K+ subscribers), since replaced by the updated release.",
 
     vfx_title:  "VFX",
     vfx_sub:    "A few VFX previews created across my projects",
@@ -266,6 +305,7 @@ const i18n = {
     pf_filter_vr:      "VR",
     pf_filter_proc:    "Procedural",
     pf_filter_jam:     "Game Jam",
+    pf_filter_modding: "Modding",
     pf_filter_vfx:     "VFX",
     pf_filter_ld:      "Level Design",
     pf_ld_title:       "Level Design",
@@ -299,7 +339,7 @@ const i18n = {
     vfx_firefly:       "Firefly",
 
     tooltip_unity:     "6+ years · Main engine · Gameplay, VFX, tools, mobile, VR, multiplayer",
-    tooltip_ue:        "Intermediate level · City Destroyer (Chaos System)",
+    tooltip_ue:        "Level design & modding · Meccha Chameleon maps (1.1M+ subscribers) · City Destroyer (Chaos System)",
     tooltip_godot:     "Basics · Personal exploration · Teaching at Studio XP (GDScript)",
     tooltip_construct: "Used for teaching · Studio XP",
     tooltip_csharp:    "Expert · Primary language across all my Unity projects",
@@ -326,8 +366,52 @@ const projects = {
       fr: ["Développeur principal sur l'ensemble du projet", "Architecture réseau server-authoritative (PurrNet)", "Gameplay mobile 3D en ligne · style party game", "Prototypage et mise en place de la base technique", "Collaboration internationale"],
       en: ["Sole lead developer across the entire project", "Server-authoritative network architecture (PurrNet)", "3D online mobile gameplay · party game style", "Prototyping and technical foundation", "International collaboration"]
     },
-    images: ["assets/ProjetMobile3D/ProjetMobile3DEnLigne.webp"],
+    images: ["/assets/ProjetMobile3D/ProjetMobile3DEnLigne.webp"],
     links: []
+  },
+  meccha: {
+    title: { fr: "Mods Meccha Chameleon", en: "Meccha Chameleon Mods" },
+    year: "2026",
+    type: { fr: "Personnel", en: "Personal" },
+    tags: ["Unreal Engine", "Level Design", "Modding", "Steam Workshop", "Zelda", "Solo"],
+    categories: ["unreal", "modding"],
+    desc: {
+      fr: "Recréations de zones emblématiques de Zelda en maps jouables pour Meccha Chameleon, un hide & seek multijoueur sous Unreal Engine. Clock Town (Majora's Mask), Kakariko Village et Kokiri Forest (Ocarina of Time) ont été adaptées en terrains de jeu : le level design d'origine devient un espace pensé pour la cachette et la poursuite. Publiées sur le Steam Workshop, ces maps totalisent plus d'1,1 million d'abonnements cumulés et plus de 2 000 évaluations.",
+      en: "Recreations of iconic Zelda areas as playable maps for Meccha Chameleon, a multiplayer hide & seek game built in Unreal Engine. Clock Town (Majora's Mask), Kakariko Village and Kokiri Forest (Ocarina of Time) were adapted into playgrounds: the original level design becomes a space built for hiding and chasing. Published on the Steam Workshop, these maps total over 1.1 million cumulative subscribers and 2,000+ ratings."
+    },
+    bullets: {
+      fr: [
+        "1,1 M+ d'abonnements cumulés · 2 000+ évaluations Steam",
+        "4 maps publiées, notées 4 à 5 étoiles sur 5",
+        "Adaptation du level design original en terrain de hide & seek",
+        "Système modulaire d'activation / désactivation de zones",
+        "Musique paramétrable en jeu avec sauvegarde des réglages",
+        "Optimisation et correction des collisions suite aux retours communauté"
+      ],
+      en: [
+        "1.1M+ cumulative subscribers · 2,000+ Steam ratings",
+        "4 published maps, rated 4 to 5 stars out of 5",
+        "Original level design adapted into a hide & seek playground",
+        "Modular system to toggle areas on and off",
+        "In-game configurable music with saved settings",
+        "Optimization and collision fixes driven by community feedback"
+      ]
+    },
+    images: [
+      "/assets/MecchaChameleon/MecchaChameleonMain.webp",
+      "/assets/MecchaChameleon/clocktown.webp",
+      "/assets/MecchaChameleon/kakariko.webp",
+      "/assets/MecchaChameleon/kokiri-forest.webp",
+      "/assets/MecchaChameleon/gameplay1.webp",
+      "/assets/MecchaChameleon/gameplay2.webp",
+      "/assets/MecchaChameleon/gameplay3.webp"
+    ],
+    links: [
+      { label: "Clock Town",       url: "https://steamcommunity.com/sharedfiles/filedetails/?id=3759263940" },
+      { label: "Kakariko Village", url: "https://steamcommunity.com/sharedfiles/filedetails/?id=3750985352" },
+      { label: "Kokiri Forest",    url: "https://steamcommunity.com/sharedfiles/filedetails/?id=3764609424" },
+      { label: "Workshop",         url: "https://steamcommunity.com/id/Milomane/myworkshopfiles/?appid=4704690" }
+    ]
   },
   mavia: {
     title: "Heroes of Mavia",
@@ -344,10 +428,10 @@ const projects = {
       en: ["Gameplay feature development", "Visual effects (VFX) creation", "Graphical integration", "Custom development tools", "Production process optimization", "Collaboration with an international team"]
     },
     images: [
-      "assets/Heroes of Mavia/HeroesOfMaviaMain.webp",
-      "assets/Heroes of Mavia/HeroesOfMavia1.webp",
-      "assets/Heroes of Mavia/HeroesOfMavia2.webp",
-      "assets/Heroes of Mavia/HeroesOfMavia3.webp"
+      "/assets/Heroes of Mavia/HeroesOfMaviaMain.webp",
+      "/assets/Heroes of Mavia/HeroesOfMavia1.webp",
+      "/assets/Heroes of Mavia/HeroesOfMavia2.webp",
+      "/assets/Heroes of Mavia/HeroesOfMavia3.webp"
     ],
     links: [
       { label: "Trailer", url: "https://www.youtube.com/watch?v=bYmpEeRG-_o" },
@@ -369,14 +453,14 @@ const projects = {
       en: ["Project Manager & Lead Developer", "Spells and player interactions", "VFX and graphical integration", "Virtualizer 2 by Cyberith compatibility", "Coordinating a 9-person team"]
     },
     images: [
-      "assets/Enigmagic/EnigmagicMain.webp",
-      "assets/Enigmagic/Enigmagic1.webp",
-      "assets/Enigmagic/Enigmagic2.webp",
-      "assets/Enigmagic/Enigmagic3.webp",
-      "assets/Enigmagic/Enigmagic4.webp",
-      "assets/Enigmagic/Enigmagic5.webp",
-      "assets/Enigmagic/testeurVirtualizer2.webp",
-      "assets/Enigmagic/Virtualizer-ELITE-2-and-Virtualizer-RD-Kit-VR-Treadmill-comparison.webp"
+      "/assets/Enigmagic/EnigmagicMain.webp",
+      "/assets/Enigmagic/Enigmagic1.webp",
+      "/assets/Enigmagic/Enigmagic2.webp",
+      "/assets/Enigmagic/Enigmagic3.webp",
+      "/assets/Enigmagic/Enigmagic4.webp",
+      "/assets/Enigmagic/Enigmagic5.webp",
+      "/assets/Enigmagic/testeurVirtualizer2.webp",
+      "/assets/Enigmagic/Virtualizer-ELITE-2-and-Virtualizer-RD-Kit-VR-Treadmill-comparison.webp"
     ],
     links: [
       { label: "Trailer", url: "https://www.youtube.com/watch?v=GU7NYKMZnUE" }
@@ -393,18 +477,18 @@ const projects = {
       en: "K-Bot is a 3D puzzle-platformer where the goal is to destroy your character to progress. It was produced at the end of 2nd year at E-Artsup. I mainly contributed to creating the character's controls and movements, as well as most of its destruction abilities. I also participated in creating the main level of the game, the factory."
     },
     images: [
-      "assets/K-Bot/K-BotMain.webp",
-      "assets/K-Bot/K-Bot1.webp",
-      "assets/K-Bot/K-Bot2.webp",
-      "assets/K-Bot/K-Bot3.webp",
-      "assets/K-Bot/K-Bot4.webp",
-      "assets/K-Bot/K-Bot5.webp",
-      "assets/K-Bot/K-Bot6.webp",
-      "assets/K-Bot/K-Bot7.webp",
-      "assets/K-Bot/K-Bot8.webp",
-      "assets/K-Bot/K-Bot9.webp",
-      "assets/K-Bot/K-Bot10.webp",
-      "assets/K-Bot/K-Bot11.webp"
+      "/assets/K-Bot/K-BotMain.webp",
+      "/assets/K-Bot/K-Bot1.webp",
+      "/assets/K-Bot/K-Bot2.webp",
+      "/assets/K-Bot/K-Bot3.webp",
+      "/assets/K-Bot/K-Bot4.webp",
+      "/assets/K-Bot/K-Bot5.webp",
+      "/assets/K-Bot/K-Bot6.webp",
+      "/assets/K-Bot/K-Bot7.webp",
+      "/assets/K-Bot/K-Bot8.webp",
+      "/assets/K-Bot/K-Bot9.webp",
+      "/assets/K-Bot/K-Bot10.webp",
+      "/assets/K-Bot/K-Bot11.webp"
     ],
     links: [
       { label: "Trailer", url: "https://www.youtube.com/watch?v=Hg_KA5CRfTE" },
@@ -422,13 +506,13 @@ const projects = {
       en: "I created this project solo, challenging myself to procedurally generate a planet that you can descend to the surface of while maintaining correct quality around the camera. To do this, I created an LOD system that works for spherical space like a planet."
     },
     images: [
-      "assets/GenerationPlanetProc/Planet3.webp",
-      "assets/GenerationPlanetProc/planete-proc.webp",
-      "assets/GenerationPlanetProc/Planet1.webp",
-      "assets/GenerationPlanetProc/Planet2.webp",
-      "assets/GenerationPlanetProc/Planet4.webp",
-      "assets/GenerationPlanetProc/Planet5.webp",
-      "assets/GenerationPlanetProc/Planet6.webp"
+      "/assets/GenerationPlanetProc/Planet3.webp",
+      "/assets/GenerationPlanetProc/planete-proc.webp",
+      "/assets/GenerationPlanetProc/Planet1.webp",
+      "/assets/GenerationPlanetProc/Planet2.webp",
+      "/assets/GenerationPlanetProc/Planet4.webp",
+      "/assets/GenerationPlanetProc/Planet5.webp",
+      "/assets/GenerationPlanetProc/Planet6.webp"
     ],
     links: []
   },
@@ -443,12 +527,12 @@ const projects = {
       en: "This project, which resembles a Minecraft clone, is a project I made to learn how voxel procedural generation works."
     },
     images: [
-      "assets/GenerationProcVoxel/generation-proc.webp",
-      "assets/GenerationProcVoxel/procedural1.webp",
-      "assets/GenerationProcVoxel/procedural2.webp",
-      "assets/GenerationProcVoxel/procedural3.webp",
-      "assets/GenerationProcVoxel/procedural4.webp",
-      "assets/GenerationProcVoxel/procedural5.webp"
+      "/assets/GenerationProcVoxel/generation-proc.webp",
+      "/assets/GenerationProcVoxel/procedural1.webp",
+      "/assets/GenerationProcVoxel/procedural2.webp",
+      "/assets/GenerationProcVoxel/procedural3.webp",
+      "/assets/GenerationProcVoxel/procedural4.webp",
+      "/assets/GenerationProcVoxel/procedural5.webp"
     ],
     links: []
   },
@@ -463,10 +547,10 @@ const projects = {
       en: "A mecha project that destroys \"A city\" to improve itself and destroy even more! This is a project I made solo, with the goal of successfully using Unreal Engine's Chaos destruction system."
     },
     images: [
-      "assets/City Destroyer/city-destroyer.webp",
-      "assets/City Destroyer/CityDestroyer1.webp",
-      "assets/City Destroyer/CityDestroyer2.webp",
-      "assets/City Destroyer/CityDestroyer3.webp"
+      "/assets/City Destroyer/city-destroyer.webp",
+      "/assets/City Destroyer/CityDestroyer1.webp",
+      "/assets/City Destroyer/CityDestroyer2.webp",
+      "/assets/City Destroyer/CityDestroyer3.webp"
     ],
     links: []
   },
@@ -481,12 +565,12 @@ const projects = {
       en: "Sentry Dawn is a game created during Global Game Jam 2020. It's a tower defense where the player must go themselves to build their towers and collect the money that appears on the map."
     },
     images: [
-      "assets/Sentry Dawn/sentry-down.webp",
-      "assets/Sentry Dawn/image.webp",
-      "assets/Sentry Dawn/image (1).webp",
-      "assets/Sentry Dawn/image (2).webp",
-      "assets/Sentry Dawn/image (3).webp",
-      "assets/Sentry Dawn/image (4).webp"
+      "/assets/Sentry Dawn/sentry-down.webp",
+      "/assets/Sentry Dawn/image.webp",
+      "/assets/Sentry Dawn/image (1).webp",
+      "/assets/Sentry Dawn/image (2).webp",
+      "/assets/Sentry Dawn/image (3).webp",
+      "/assets/Sentry Dawn/image (4).webp"
     ],
     links: [
       { label: "Global Game Jam", url: "https://globalgamejam.org/2020/games/sentry-dawn-1" }
@@ -503,12 +587,12 @@ const projects = {
       en: "Memories Uncovered is a game created during Global Game Jam 2021. It features a character searching for their memories in a randomly generated maze while being chased by monsters."
     },
     images: [
-      "assets/MemoriesUncovered/memories-uncovered.webp",
-      "assets/MemoriesUncovered/MemoriesUncovered1.webp",
-      "assets/MemoriesUncovered/MemoriesUncovered2.webp",
-      "assets/MemoriesUncovered/MemoriesUncovered3.webp",
-      "assets/MemoriesUncovered/MemoriesUncovered4.webp",
-      "assets/MemoriesUncovered/MemoriesUncovered5.webp"
+      "/assets/MemoriesUncovered/memories-uncovered.webp",
+      "/assets/MemoriesUncovered/MemoriesUncovered1.webp",
+      "/assets/MemoriesUncovered/MemoriesUncovered2.webp",
+      "/assets/MemoriesUncovered/MemoriesUncovered3.webp",
+      "/assets/MemoriesUncovered/MemoriesUncovered4.webp",
+      "/assets/MemoriesUncovered/MemoriesUncovered5.webp"
     ],
     links: [
       { label: "Global Game Jam", url: "https://globalgamejam.org/2021/games/lost-and-found-memories-uncovered-7" }
@@ -524,7 +608,7 @@ const projects = {
       fr: "Galactic Jumping est un jeu en 2D créé en 3 jours à l'occasion d'un workshop. On contrôle un petit astronaute qui doit s'aider de la gravité des planètes pour atteindre la fin des niveaux !",
       en: "Galactic Jumping is a 2D game created in 3 days during a workshop. You control a little astronaut who must use the gravity of planets to reach the end of the levels!"
     },
-    images: ["assets/GalacticJumping/galactic-jumping.webp"],
+    images: ["/assets/GalacticJumping/galactic-jumping.webp"],
     links: [
       { label: "Télécharger", url: "https://drive.google.com/file/d/1eDsjPd-umTmEgpn4DTefKdhCMQiAIjsd/view" }
     ]
@@ -540,13 +624,13 @@ const projects = {
       en: "Komrog is a 2D roguelike project made in the first year of school, where the goal is to explore a dungeon while collecting upgrades for your weapon and character until you reach the end of the game."
     },
     images: [
-      "assets/Komrog/komrog.webp",
-      "assets/Komrog/image.webp",
-      "assets/Komrog/image (1).webp",
-      "assets/Komrog/image (2).webp",
-      "assets/Komrog/image (3).webp",
-      "assets/Komrog/image (4).webp",
-      "assets/Komrog/image (5).webp"
+      "/assets/Komrog/komrog.webp",
+      "/assets/Komrog/image.webp",
+      "/assets/Komrog/image (1).webp",
+      "/assets/Komrog/image (2).webp",
+      "/assets/Komrog/image (3).webp",
+      "/assets/Komrog/image (4).webp",
+      "/assets/Komrog/image (5).webp"
     ],
     links: [
       { label: "Télécharger", url: "https://drive.google.com/file/d/1cLqAv5-75650Bm8FUApQVTyl9aU7JxfX/view" }
@@ -562,7 +646,7 @@ const projects = {
       fr: "Le projet Tron est un jeu réalisé en cours. C'est un jeu de versus en 3D de 2 à 4 joueurs ou l'on contrôle une moto et dans lequel on doit éliminer les autres joueurs en leur passant devant grace à une trainée. On est aussi aidé par des power-up qui se génèrent sur le terrain.",
       en: "The Tron project is a game made in class. It's a 3D versus game for 2 to 4 players where you control a motorcycle and must eliminate other players by crossing in front of them with your trail. You are also helped by power-ups that spawn on the map."
     },
-    images: ["assets/ProjetTron/projet-tron.webp"],
+    images: ["/assets/ProjetTron/projet-tron.webp"],
     links: []
   }
 };
@@ -573,6 +657,7 @@ let currentLang    = localStorage.getItem('lang')
 let currentTheme   = localStorage.getItem('theme') || 'dark';
 let currentProject = null;
 let currentImgIdx  = 0;
+let steamData      = null;
 
 /* ── INIT ──────────────────────────────────────────────── */
 document.addEventListener('DOMContentLoaded', () => {
@@ -582,6 +667,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initModal();
   initFilters();
   initScrollEffects();
+  initSteamStats();
 });
 
 /* Re-sync theme/lang if page is restored from bfcache
@@ -594,28 +680,6 @@ window.addEventListener('pageshow', (e) => {
   }
 });
 
-/* ── SYNC INTERNAL LINKS ──────────────────────────────── */
-/* Decorates every .html link with ?lang=…&theme=… so that
-   settings survive cross-page navigation even when
-   localStorage is isolated per-file (file:// protocol).
-   Also strips those params from the current URL bar so
-   it stays clean after they have been consumed.          */
-function syncLinks() {
-  document.querySelectorAll('a[href]').forEach(function(a) {
-    if (!a.getAttribute('href') || !/\.html/.test(a.getAttribute('href'))) return;
-    try {
-      const url = new URL(a.href, location.href);
-      url.searchParams.set('lang',  currentLang);
-      url.searchParams.set('theme', currentTheme);
-      a.href = url.pathname + url.search + url.hash;
-    } catch(e) {}
-  });
-  /* Clean params from address bar once they have been read */
-  if (/[?&](lang|theme)=/.test(location.search)) {
-    try { history.replaceState(null, '', location.pathname + location.hash); } catch(e) {}
-  }
-}
-
 /* ── THEME ─────────────────────────────────────────────── */
 function applyTheme(theme) {
   currentTheme = theme;
@@ -623,7 +687,6 @@ function applyTheme(theme) {
   localStorage.setItem('theme', theme);
   const btn = document.getElementById('theme-btn');
   if (btn) btn.textContent = theme === 'dark' ? '☀' : '🌙';
-  syncLinks();
 }
 document.getElementById('theme-btn')?.addEventListener('click', () => {
   applyTheme(currentTheme === 'dark' ? 'light' : 'dark');
@@ -645,7 +708,9 @@ function applyLang(lang) {
   });
   const btn = document.getElementById('lang-btn');
   if (btn) btn.textContent = lang === 'fr' ? 'EN' : 'FR';
-  syncLinks();
+  /* Number formatting and the "updated X ago" stamp are locale-dependent,
+     and the loop above just reset the stamp to its plain label. */
+  renderSteamStats();
 }
 document.getElementById('lang-btn')?.addEventListener('click', () => {
   applyLang(currentLang === 'fr' ? 'en' : 'fr');
@@ -794,6 +859,61 @@ function updateGalleryDots() {
     dot.addEventListener('click', () => showImage(i));
     dotsEl.appendChild(dot);
   });
+}
+
+/* ── STEAM WORKSHOP STATS ──────────────────────────────── */
+/* assets/steam-stats.json is refreshed every 6h by the
+   "Update Steam Workshop stats" GitHub Action. If the fetch
+   fails we keep the values baked into the HTML. Those are
+   rounded down, so they stay true as the counters climb.   */
+function initSteamStats() {
+  if (!document.querySelector('[data-steam]')) return;
+  fetch('/assets/steam-stats.json', { cache: 'no-cache' })
+    .then(r => (r.ok ? r.json() : Promise.reject(r.status)))
+    .then(data => {
+      steamData = data;
+      renderSteamStats();
+    })
+    .catch(() => { /* keep the static fallback values */ });
+}
+
+/* Round DOWN so the trailing "+" is always honest. */
+function formatCount(n) {
+  const fr = currentLang === 'fr';
+  if (n >= 1e6) {
+    const m = (Math.floor(n / 1e5) / 10).toFixed(1);
+    return fr ? m.replace('.', ',') + ' M+' : m + 'M+';
+  }
+  if (n >= 1e3) {
+    const k = Math.floor(n / 1e3);
+    return fr ? k + ' K+' : k + 'K+';
+  }
+  return String(n);
+}
+
+function renderSteamStats() {
+  if (!steamData) return;
+
+  document.querySelectorAll('[data-steam]').forEach(el => {
+    const value = el.dataset.steam
+      .split('.')
+      .reduce((obj, key) => (obj == null ? obj : obj[key]), steamData);
+    if (typeof value === 'number') el.textContent = formatCount(value);
+  });
+
+  const stamp = document.getElementById('mod-updated');
+  if (!stamp || !steamData.updated) return;
+  const hours = Math.floor((Date.now() - new Date(steamData.updated)) / 3.6e6);
+  if (!Number.isFinite(hours) || hours < 0) return;
+  try {
+    /* Intl renders 0 hours as "cette heure-ci" / "this hour", which reads
+       oddly here, so use an explicit label for the under-an-hour case. */
+    const rtf = new Intl.RelativeTimeFormat(currentLang, { numeric: 'auto' });
+    const rel = hours < 1 ? i18n[currentLang].mod_updated_now
+              : hours < 24 ? rtf.format(-hours, 'hour')
+              : rtf.format(-Math.round(hours / 24), 'day');
+    stamp.textContent = `${i18n[currentLang].mod_updated} · ${rel}`;
+  } catch (e) { /* Intl unavailable, leave the plain label */ }
 }
 
 /* ── PORTFOLIO FILTERS ─────────────────────────────────── */

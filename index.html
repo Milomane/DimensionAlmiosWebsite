@@ -3,19 +3,19 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Florentin Roberge — Développeur Gameplay Unity / C#, 6 ans d'expérience. Mobile, VR, Multijoueur, Outils.">
+  <meta name="description" content="Florentin Roberge — Développeur Gameplay Unity / Godot / C#, 6 ans d'expérience. Mobile, VR, Multijoueur, Outils.">
   <title>Florentin Roberge — Game Developer</title>
 
   <!-- Favicon -->
-  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
-  <link rel="icon" type="image/webp" href="assets/WebsiteLogo.webp">
-  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png">
+  <link rel="icon" type="image/webp" href="/assets/WebsiteLogo.webp">
+  <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
 
   <!-- Open Graph / Discord / social previews -->
   <meta property="og:type"        content="website">
   <meta property="og:url"         content="https://dimensionalmios.com/">
   <meta property="og:title"       content="Florentin Roberge — Game Developer">
-  <meta property="og:description" content="Florentin Roberge — Développeur Gameplay Unity / C#, 6 ans d'expérience. Mobile, VR, Multijoueur, Outils.">
+  <meta property="og:description" content="Florentin Roberge — Développeur Gameplay Unity / Godot / C#, 6 ans d'expérience. Mobile, VR, Multijoueur, Outils.">
   <meta property="og:image"       content="https://dimensionalmios.com/assets/og-preview.webp">
   <meta property="og:image:width"  content="1200">
   <meta property="og:image:height" content="630">
@@ -24,17 +24,15 @@
   <!-- Twitter Card -->
   <meta name="twitter:card"        content="summary_large_image">
   <meta name="twitter:title"       content="Florentin Roberge — Game Developer">
-  <meta name="twitter:description" content="Florentin Roberge — Développeur Gameplay Unity / C#, 6 ans d'expérience. Mobile, VR, Multijoueur, Outils.">
+  <meta name="twitter:description" content="Florentin Roberge — Développeur Gameplay Unity / Godot / C#, 6 ans d'expérience. Mobile, VR, Multijoueur, Outils.">
   <meta name="twitter:image"       content="https://dimensionalmios.com/assets/og-preview.webp">
 
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="/css/style.css">
   <script>
     // Apply theme & lang before render (no flash).
-    // URL params take priority so settings survive file:// isolation.
     (function(){
-      var p     = new URLSearchParams(location.search);
-      var theme = p.get('theme') || localStorage.getItem('theme') || 'dark';
-      var lang  = p.get('lang')  || localStorage.getItem('lang')
+      var theme = localStorage.getItem('theme') || 'dark';
+      var lang  = localStorage.getItem('lang')
                   || (navigator.language && navigator.language.toLowerCase().startsWith('fr') ? 'fr' : 'en');
       localStorage.setItem('theme', theme);
       localStorage.setItem('lang',  lang);
@@ -50,12 +48,12 @@
   <!-- ── NAVBAR ── -->
   <header id="navbar">
     <nav class="nav-inner">
-      <a href="index.html" class="nav-logo">Florentin<span>.</span></a>
+      <a href="/" class="nav-logo">Florentin<span>.</span></a>
       <ul class="nav-links" id="nav-links">
         <li><a href="#about"      data-i18n="nav_about">À propos</a></li>
         <li><a href="#skills"     data-i18n="nav_skills">Compétences</a></li>
         <li><a href="#experience" data-i18n="nav_exp">Expériences</a></li>
-        <li><a href="portfolio.html" data-i18n="nav_portfolio">Portfolio</a></li>
+        <li><a href="/portfolio/" data-i18n="nav_portfolio">Portfolio</a></li>
         <li><a href="#contact"    data-i18n="nav_contact">Contact</a></li>
       </ul>
       <div class="nav-controls">
@@ -73,18 +71,18 @@
       <div class="hero-text">
         <p class="hero-eyebrow mono" data-i18n="hero_eyebrow">Game Developer</p>
         <h1>Florentin<br><span class="gradient-text">Roberge</span></h1>
-        <p class="hero-title" data-i18n="hero_subtitle">Développeur Gameplay Unity / C#</p>
+        <p class="hero-title" data-i18n="hero_subtitle">Développeur Gameplay Unity / Godot / C#</p>
         <p class="hero-desc"  data-i18n="hero_desc">6 ans d'expérience · Mobile · VR · Multijoueur · Outils</p>
         <div class="hero-ctas">
-          <a href="portfolio.html" class="btn btn-primary" data-i18n="hero_cta_portfolio">Voir le Portfolio</a>
-          <a href="SiteReference/CV Professionnel Communication Marketing Minimaliste Moderne Violet.pdf"
+          <a href="/portfolio/" class="btn btn-primary" data-i18n="hero_cta_portfolio">Voir le Portfolio</a>
+          <a href="/SiteReference/CV Professionnel Communication Marketing Minimaliste Moderne Violet.pdf"
              class="btn btn-outline" target="_blank" data-i18n="hero_cta_cv">Télécharger le CV</a>
           <a href="#contact" class="btn btn-ghost" data-i18n="hero_cta_contact">Contact</a>
         </div>
       </div>
       <div class="hero-photo-wrap">
         <div class="hero-photo-ring">
-          <img src="assets/photo.webp" alt="Florentin Roberge" class="hero-photo">
+          <img src="/assets/photo.webp" alt="Florentin Roberge" class="hero-photo">
         </div>
       </div>
     </div>
@@ -102,6 +100,7 @@
           <p data-i18n="about_p3">Passionné de jeux vidéo, de musique electro et d'animés, de modding et streaming, j'ai toujours un projet personnel qui tourne en arrière plan.</p>
           <div class="about-tags">
             <span class="tag">Unity</span>
+            <span class="tag">Godot</span>
             <span class="tag">C#</span>
             <span class="tag">Gameplay</span>
             <span class="tag">Mobile</span>
@@ -109,6 +108,8 @@
             <span class="tag">Tools</span>
             <span class="tag">VFX</span>
             <span class="tag">Procedural</span>
+            <span class="tag">Unreal</span>
+            <span class="tag">Modding</span>
           </div>
         </div>
         <div class="about-extra">
@@ -158,25 +159,25 @@
             <div class="skill-icon-item"
                  data-tooltip="6+ ans · Moteur principal · Gameplay, VFX, tools, mobile, VR, multijoueur"
                  data-i18n-tooltip="tooltip_unity">
-              <img src="assets/Logos/unity-logo.webp" alt="Unity" loading="lazy">
+              <img src="/assets/Logos/unity-logo.webp" alt="Unity" loading="lazy">
               <span>Unity</span>
             </div>
             <div class="skill-icon-item"
-                 data-tooltip="Niveau intermédiaire · City Destroyer (Chaos System)"
+                 data-tooltip="Level design & modding · Maps Meccha Chameleon (1,1 M+ d'abonnements) · City Destroyer (Chaos System)"
                  data-i18n-tooltip="tooltip_ue">
-              <img src="assets/Logos/UE-Icon-2023-Black.webp" alt="Unreal Engine" class="skill-icon-ue" loading="lazy">
+              <img src="/assets/Logos/UE-Icon-2023-Black.webp" alt="Unreal Engine" class="skill-icon-ue" loading="lazy">
               <span>Unreal Engine</span>
             </div>
             <div class="skill-icon-item"
                  data-tooltip="Bases · Exploration personnelle · Enseignement chez Studio XP (GDScript)"
                  data-i18n-tooltip="tooltip_godot">
-              <img src="assets/Logos/godot-logo.webp" alt="Godot" loading="lazy">
+              <img src="/assets/Logos/godot-logo.webp" alt="Godot" loading="lazy">
               <span>Godot</span>
             </div>
             <div class="skill-icon-item"
                  data-tooltip="Utilisé en enseignement · Studio XP"
                  data-i18n-tooltip="tooltip_construct">
-              <img src="assets/Logos/construct-3-logo.webp" alt="Construct 3" loading="lazy">
+              <img src="/assets/Logos/construct-3-logo.webp" alt="Construct 3" loading="lazy">
               <span>Construct 3</span>
             </div>
           </div>
@@ -189,31 +190,31 @@
             <div class="skill-icon-item"
                  data-tooltip="Expert · Langage principal sur tous mes projets Unity"
                  data-i18n-tooltip="tooltip_csharp">
-              <img src="assets/Logos/csharp-logo.webp" alt="C#" loading="lazy">
+              <img src="/assets/Logos/csharp-logo.webp" alt="C#" loading="lazy">
               <span>C#</span>
             </div>
             <div class="skill-icon-item"
                  data-tooltip="Intermédiaire · Outils, pipelines IA, bots Discord"
                  data-i18n-tooltip="tooltip_python">
-              <img src="assets/Logos/python-logo-only.svg" alt="Python">
+              <img src="/assets/Logos/python-logo-only.svg" alt="Python">
               <span>Python</span>
             </div>
             <div class="skill-icon-item"
                  data-tooltip="Modding Minecraft · NeoForge / KubeJS"
                  data-i18n-tooltip="tooltip_lua">
-              <img src="assets/Logos/lua-logo.svg" alt="Lua">
+              <img src="/assets/Logos/lua-logo.svg" alt="Lua">
               <span>Lua / KubeJS</span>
             </div>
             <div class="skill-icon-item"
                  data-tooltip="GDScript · Enseignement chez Studio XP · Exploration Godot"
                  data-i18n-tooltip="tooltip_gdscript">
-              <img src="assets/Logos/gdscript-logo.svg" alt="GDScript">
+              <img src="/assets/Logos/gdscript-logo.svg" alt="GDScript">
               <span>GDScript</span>
             </div>
             <div class="skill-icon-item"
                  data-tooltip="Custom shaders, VFX, renderer features sous URP"
                  data-i18n-tooltip="tooltip_hlsl">
-              <img src="assets/Logos/hlsl-logo.svg" alt="HLSL / ShaderGraph">
+              <img src="/assets/Logos/hlsl-logo.svg" alt="HLSL / ShaderGraph">
               <span>HLSL / ShaderGraph</span>
             </div>
           </div>
@@ -282,6 +283,29 @@
             </div>
             <p data-i18n="exp1_desc">Contrat avec un indépendant américain pour la création d'un jeu vidéo mobile 3D en ligne de style party game. Seul développeur principal, prise en charge de l'ensemble de la stack Unity : architecture réseau server-authoritative, gameplay, prototypage et base technique.</p>
             <p class="timeline-highlight" data-i18n="exp1_highlight">Développement solo · Architecture réseau · Style Mario Party · Mobile 3D en ligne</p>
+          </div>
+        </div>
+
+        <!-- Modding Meccha Chameleon -->
+        <div class="timeline-item">
+          <div class="timeline-dot featured"></div>
+          <div class="timeline-content timeline-featured">
+            <div class="timeline-header">
+              <div>
+                <span class="timeline-period">2026</span>
+                <h3 data-i18n="exp5_role">Level design &amp; modding · Meccha Chameleon</h3>
+                <span class="timeline-company" data-i18n="exp5_company">Projet personnel · Steam Workshop</span>
+              </div>
+              <div class="timeline-tags">
+                <span class="tag tag-accent">1,1 M+</span>
+                <span class="tag">Unreal Engine</span>
+                <span class="tag">Level Design</span>
+                <span class="tag">Modding</span>
+              </div>
+            </div>
+            <p data-i18n="exp5_desc">Conception et publication de maps pour Meccha Chameleon sous Unreal Engine : recréations de zones emblématiques de Zelda (Clock Town, Kakariko Village, Kokiri Forest) adaptées en terrains de jeu pour un hide &amp; seek multijoueur. Systèmes modulaires d'activation de zones, musique paramétrable et sauvegarde des réglages, optimisation et correction des collisions au fil des retours de la communauté.</p>
+            <p class="timeline-highlight" data-i18n="exp5_highlight">1,1 M+ d'abonnements cumulés · 2 000+ évaluations · 4 maps publiées · Retours communauté</p>
+            <a href="/portfolio/#modding" class="timeline-link" data-i18n="exp5_link">→ Voir les mods</a>
           </div>
         </div>
 
@@ -381,7 +405,7 @@
         <!-- Projet Mobile 3D -->
         <article class="portfolio-card" data-project="mobile3d" role="button" tabindex="0">
           <div class="portfolio-card-img">
-            <img src="assets/ProjetMobile3D/ProjetMobile3DEnLigne.webp" alt="Jeu Mobile 3D en ligne" loading="lazy">
+            <img src="/assets/ProjetMobile3D/ProjetMobile3DEnLigne.webp" alt="Jeu Mobile 3D en ligne" loading="lazy">
             <div class="portfolio-card-overlay">
               <button class="btn btn-primary" data-i18n="card_details" tabindex="-1">Voir les détails</button>
             </div>
@@ -402,7 +426,7 @@
         <!-- Heroes of Mavia -->
         <article class="portfolio-card" data-project="mavia" role="button" tabindex="0">
           <div class="portfolio-card-img">
-            <img src="assets/Heroes of Mavia/HeroesOfMaviaMain.webp" alt="Heroes of Mavia" loading="lazy">
+            <img src="/assets/Heroes of Mavia/HeroesOfMaviaMain.webp" alt="Heroes of Mavia" loading="lazy">
             <div class="portfolio-card-overlay">
               <button class="btn btn-primary" data-i18n="card_details" tabindex="-1">Voir les détails</button>
             </div>
@@ -423,7 +447,7 @@
         <!-- Enigmagic -->
         <article class="portfolio-card" data-project="enigmagic" role="button" tabindex="0">
           <div class="portfolio-card-img">
-            <img src="assets/Enigmagic/EnigmagicMain.webp" alt="Enigmagic" loading="lazy">
+            <img src="/assets/Enigmagic/EnigmagicMain.webp" alt="Enigmagic" loading="lazy">
             <div class="portfolio-card-overlay">
               <button class="btn btn-primary" data-i18n="card_details" tabindex="-1">Voir les détails</button>
             </div>
@@ -444,7 +468,7 @@
         <!-- K-Bot -->
         <article class="portfolio-card" data-project="kbot" role="button" tabindex="0">
           <div class="portfolio-card-img">
-            <img src="assets/K-Bot/K-BotMain.webp" alt="K-Bot" loading="lazy">
+            <img src="/assets/K-Bot/K-BotMain.webp" alt="K-Bot" loading="lazy">
             <div class="portfolio-card-overlay">
               <button class="btn btn-primary" data-i18n="card_details" tabindex="-1">Voir les détails</button>
             </div>
@@ -465,7 +489,7 @@
         <!-- Planète Procédurale -->
         <article class="portfolio-card" data-project="planet" role="button" tabindex="0">
           <div class="portfolio-card-img">
-            <img src="assets/GenerationPlanetProc/planete-proc.webp" alt="Planète Procédurale" loading="lazy">
+            <img src="/assets/GenerationPlanetProc/planete-proc.webp" alt="Planète Procédurale" loading="lazy">
             <div class="portfolio-card-overlay">
               <button class="btn btn-primary" data-i18n="card_details" tabindex="-1">Voir les détails</button>
             </div>
@@ -486,7 +510,7 @@
         <!-- City Destroyer -->
         <article class="portfolio-card" data-project="city" role="button" tabindex="0">
           <div class="portfolio-card-img">
-            <img src="assets/City Destroyer/city-destroyer.webp" alt="City Destroyer" loading="lazy">
+            <img src="/assets/City Destroyer/city-destroyer.webp" alt="City Destroyer" loading="lazy">
             <div class="portfolio-card-overlay">
               <button class="btn btn-primary" data-i18n="card_details" tabindex="-1">Voir les détails</button>
             </div>
@@ -506,7 +530,7 @@
 
       </div>
       <div class="portfolio-more">
-        <a href="portfolio.html" class="btn btn-outline" data-i18n="portfolio_more">Voir tous les projets →</a>
+        <a href="/portfolio/" class="btn btn-outline" data-i18n="portfolio_more">Voir tous les projets →</a>
       </div>
     </div>
   </section>
@@ -539,7 +563,7 @@
               <span class="contact-value">florentin-roberge</span>
             </div>
           </a>
-          <a href="SiteReference/CV Professionnel Communication Marketing Minimaliste Moderne Violet.pdf"
+          <a href="/SiteReference/CV Professionnel Communication Marketing Minimaliste Moderne Violet.pdf"
              target="_blank" class="contact-card">
             <span class="contact-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="20" height="20"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><line x1="10" y1="9" x2="8" y2="9"/></svg></span>
             <div>
@@ -563,7 +587,7 @@
 
   <!-- ── FOOTER ── -->
   <footer class="footer">
-    <p>© 2026 Florentin Roberge · <span data-i18n="footer_made">Fait avec passion</span> · <span style="opacity:0.35;font-size:0.75em;">v2.5</span></p>
+    <p>© 2026 Florentin Roberge · <span data-i18n="footer_made">Fait avec passion</span> · <span style="opacity:0.35;font-size:0.75em;">v2.6</span></p>
   </footer>
 
   <!-- ── MODAL ── -->
@@ -590,6 +614,6 @@
     </div>
   </div>
 
-  <script src="js/main.js"></script>
+  <script src="/js/main.js"></script>
 </body>
 </html>

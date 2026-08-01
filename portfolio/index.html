@@ -1,0 +1,640 @@
+<!DOCTYPE html>
+<html lang="fr" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portfolio de Florentin Roberge — Développeur Gameplay Unity / Godot / C#. Tous les projets.">
+  <title>Portfolio — Florentin Roberge</title>
+  <link rel="stylesheet" href="/css/style.css">
+  <script>
+    // Apply theme & lang before render (no flash).
+    (function(){
+      var theme = localStorage.getItem('theme') || 'dark';
+      var lang  = localStorage.getItem('lang')
+                  || (navigator.language && navigator.language.toLowerCase().startsWith('fr') ? 'fr' : 'en');
+      localStorage.setItem('theme', theme);
+      localStorage.setItem('lang',  lang);
+      document.documentElement.setAttribute('data-theme', theme);
+      document.documentElement.lang = lang;
+    })();
+  </script>
+</head>
+<body>
+
+  <!-- ── NAVBAR ── -->
+  <header id="navbar">
+    <nav class="nav-inner">
+      <a href="/" class="nav-logo">Florentin<span>.</span></a>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="/#about"      data-i18n="nav_about">À propos</a></li>
+        <li><a href="/#skills"     data-i18n="nav_skills">Compétences</a></li>
+        <li><a href="/#experience" data-i18n="nav_exp">Expériences</a></li>
+        <li><a href="/portfolio/"        data-i18n="nav_portfolio" class="nav-active">Portfolio</a></li>
+        <li><a href="/#contact"    data-i18n="nav_contact">Contact</a></li>
+      </ul>
+      <div class="nav-controls">
+        <button id="lang-btn"   class="ctrl-btn" aria-label="Changer la langue">EN</button>
+        <button id="theme-btn"  class="ctrl-btn" aria-label="Changer le thème">☀</button>
+        <button id="nav-toggle" class="ctrl-btn nav-toggle" aria-label="Menu">☰</button>
+      </div>
+    </nav>
+  </header>
+
+  <!-- ── PAGE HEADER ── -->
+  <div class="portfolio-page-header">
+    <div class="hero-bg"></div>
+    <div class="container" style="position:relative;z-index:1;">
+      <a href="/" class="btn btn-ghost"
+         style="margin-bottom:24px;display:inline-flex;" data-i18n="back_home">← Retour à l'accueil</a>
+      <h1><span class="gradient-text" data-i18n="pf_title">Portfolio</span></h1>
+      <p style="margin-top:12px;max-width:560px;" data-i18n="pf_sub">Tous mes projets — jeux, prototypes, expériences techniques</p>
+      <div class="portfolio-filters">
+        <button class="filter-btn active" data-filter="all"   data-i18n="pf_filter_all">Tout</button>
+        <button class="filter-btn" data-filter="pro"          data-i18n="pf_filter_pro">Professionnel</button>
+        <button class="filter-btn" data-filter="unity"        data-i18n="pf_filter_unity">Unity</button>
+        <button class="filter-btn" data-filter="unreal"       data-i18n="pf_filter_unreal">Unreal</button>
+        <button class="filter-btn" data-filter="vr"           data-i18n="pf_filter_vr">VR</button>
+        <button class="filter-btn" data-filter="proc"         data-i18n="pf_filter_proc">Procédural</button>
+        <button class="filter-btn" data-filter="jam"          data-i18n="pf_filter_jam">Game Jam</button>
+        <button class="filter-btn" data-filter="modding"      data-i18n="pf_filter_modding">Modding</button>
+        <a href="#vfx"          class="filter-btn filter-anchor" data-i18n="pf_filter_vfx">VFX</a>
+        <a href="#level-design" class="filter-btn filter-anchor" data-i18n="pf_filter_ld">Level Design</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── MODDING · MECCHA CHAMELEON ── -->
+  <section id="modding" class="section mod-section">
+    <div class="mod-bg" aria-hidden="true"></div>
+    <div class="container" style="position:relative;z-index:1;">
+
+      <p class="hero-eyebrow mono" data-i18n="mod_eyebrow">Modding · Unreal Engine</p>
+      <h2 class="section-title mod-title" data-i18n="mod_title">Mes mods Meccha Chameleon</h2>
+      <p class="section-sub mod-sub" data-i18n="mod_sub">Recréations de zones cultes de Zelda en maps jouables, publiées sur le Steam Workshop, plus d'un million de téléchargements cumulés.</p>
+
+      <!-- Stats · numbers are refreshed from assets/steam-stats.json -->
+      <div class="mod-stats">
+        <span class="mod-stat">
+          <strong data-steam="totals.subscriptions">1,1 M+</strong>
+          <span data-i18n="mod_stat_subs">abonnements cumulés</span>
+        </span>
+        <span class="mod-stat">
+          <strong>2 000+</strong>
+          <span data-i18n="mod_stat_ratings">évaluations Steam</span>
+        </span>
+        <span class="mod-stat">
+          <strong>4–5 <span class="mod-star">★</span></strong>
+          <span data-i18n="mod_stat_score">note sur chaque map</span>
+        </span>
+        <span class="mod-stat">
+          <strong data-steam="totals.maps">4</strong>
+          <span data-i18n="mod_stat_maps">maps publiées</span>
+        </span>
+      </div>
+
+      <!-- Workshop cards -->
+      <div class="mod-grid">
+
+        <a class="ws-card" href="https://steamcommunity.com/sharedfiles/filedetails/?id=3759263940"
+           target="_blank" rel="noopener noreferrer">
+          <div class="ws-card-head">
+            <svg class="ws-steam" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M11.979 0C5.678 0 .511 4.86.022 11.037l6.432 2.658c.545-.371 1.203-.59 1.912-.59.063 0 .125.004.188.006l2.861-4.142V8.91c0-2.495 2.028-4.524 4.524-4.524 2.494 0 4.524 2.031 4.524 4.527s-2.03 4.525-4.524 4.525h-.105l-4.076 2.911c0 .052.004.105.004.159 0 1.875-1.515 3.396-3.39 3.396-1.635 0-3.016-1.173-3.331-2.727L.436 15.27C1.862 20.307 6.486 24 11.979 24c6.627 0 11.999-5.373 11.999-12S18.605 0 11.979 0zM7.54 18.21l-1.473-.61c.262.543.714.999 1.314 1.25 1.297.539 2.793-.076 3.332-1.375.263-.63.264-1.319.005-1.949s-.75-1.121-1.377-1.383c-.624-.26-1.29-.249-1.878-.03l1.523.63c.956.4 1.409 1.5 1.009 2.455-.397.957-1.497 1.41-2.454 1.012H7.54zm11.415-9.303c0-1.662-1.353-3.015-3.015-3.015-1.665 0-3.015 1.353-3.015 3.015 0 1.665 1.35 3.015 3.015 3.015 1.663 0 3.015-1.35 3.015-3.015zm-5.273-.005c0-1.252 1.013-2.266 2.265-2.266 1.249 0 2.266 1.014 2.266 2.266 0 1.251-1.017 2.265-2.266 2.265-1.253 0-2.265-1.014-2.265-2.265z"/></svg>
+            <span class="ws-head-label">Steam Workshop</span>
+            <span class="ws-head-ext" aria-hidden="true">↗</span>
+          </div>
+          <div class="ws-card-img">
+            <img src="/assets/MecchaChameleon/clocktown.webp" alt="Majora's Mask : Clock Town" loading="lazy">
+          </div>
+          <div class="ws-card-body">
+            <h3 class="ws-card-title">Clock Town</h3>
+            <p class="ws-card-game">Meccha Chameleon · Majora's Mask</p>
+            <div class="ws-card-meta">
+              <span class="ws-subs">
+                <span class="ws-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg></span>
+                <span data-steam="items.clocktown.subscriptions">486 K+</span>
+              </span>
+              <span class="ws-rating">★★★★★</span>
+            </div>
+          </div>
+          <div class="ws-card-foot">
+            <span class="ws-btn" data-i18n="mod_card_btn">Voir sur le Workshop</span>
+          </div>
+        </a>
+
+        <a class="ws-card" href="https://steamcommunity.com/sharedfiles/filedetails/?id=3750985352"
+           target="_blank" rel="noopener noreferrer">
+          <div class="ws-card-head">
+            <svg class="ws-steam" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M11.979 0C5.678 0 .511 4.86.022 11.037l6.432 2.658c.545-.371 1.203-.59 1.912-.59.063 0 .125.004.188.006l2.861-4.142V8.91c0-2.495 2.028-4.524 4.524-4.524 2.494 0 4.524 2.031 4.524 4.527s-2.03 4.525-4.524 4.525h-.105l-4.076 2.911c0 .052.004.105.004.159 0 1.875-1.515 3.396-3.39 3.396-1.635 0-3.016-1.173-3.331-2.727L.436 15.27C1.862 20.307 6.486 24 11.979 24c6.627 0 11.999-5.373 11.999-12S18.605 0 11.979 0zM7.54 18.21l-1.473-.61c.262.543.714.999 1.314 1.25 1.297.539 2.793-.076 3.332-1.375.263-.63.264-1.319.005-1.949s-.75-1.121-1.377-1.383c-.624-.26-1.29-.249-1.878-.03l1.523.63c.956.4 1.409 1.5 1.009 2.455-.397.957-1.497 1.41-2.454 1.012H7.54zm11.415-9.303c0-1.662-1.353-3.015-3.015-3.015-1.665 0-3.015 1.353-3.015 3.015 0 1.665 1.35 3.015 3.015 3.015 1.663 0 3.015-1.35 3.015-3.015zm-5.273-.005c0-1.252 1.013-2.266 2.265-2.266 1.249 0 2.266 1.014 2.266 2.266 0 1.251-1.017 2.265-2.266 2.265-1.253 0-2.265-1.014-2.265-2.265z"/></svg>
+            <span class="ws-head-label">Steam Workshop</span>
+            <span class="ws-head-ext" aria-hidden="true">↗</span>
+          </div>
+          <div class="ws-card-img">
+            <img src="/assets/MecchaChameleon/kakariko.webp" alt="Ocarina of Time : Kakariko Village" loading="lazy">
+          </div>
+          <div class="ws-card-body">
+            <h3 class="ws-card-title">Kakariko Village</h3>
+            <p class="ws-card-game">Meccha Chameleon · Ocarina of Time</p>
+            <div class="ws-card-meta">
+              <span class="ws-subs">
+                <span class="ws-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg></span>
+                <span data-steam="items.kakariko.subscriptions">305 K+</span>
+              </span>
+              <span class="ws-rating">★★★★<span class="ws-star-off">★</span></span>
+            </div>
+          </div>
+          <div class="ws-card-foot">
+            <span class="ws-btn" data-i18n="mod_card_btn">Voir sur le Workshop</span>
+          </div>
+        </a>
+
+        <a class="ws-card" href="https://steamcommunity.com/sharedfiles/filedetails/?id=3764609424"
+           target="_blank" rel="noopener noreferrer">
+          <div class="ws-card-head">
+            <svg class="ws-steam" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M11.979 0C5.678 0 .511 4.86.022 11.037l6.432 2.658c.545-.371 1.203-.59 1.912-.59.063 0 .125.004.188.006l2.861-4.142V8.91c0-2.495 2.028-4.524 4.524-4.524 2.494 0 4.524 2.031 4.524 4.527s-2.03 4.525-4.524 4.525h-.105l-4.076 2.911c0 .052.004.105.004.159 0 1.875-1.515 3.396-3.39 3.396-1.635 0-3.016-1.173-3.331-2.727L.436 15.27C1.862 20.307 6.486 24 11.979 24c6.627 0 11.999-5.373 11.999-12S18.605 0 11.979 0zM7.54 18.21l-1.473-.61c.262.543.714.999 1.314 1.25 1.297.539 2.793-.076 3.332-1.375.263-.63.264-1.319.005-1.949s-.75-1.121-1.377-1.383c-.624-.26-1.29-.249-1.878-.03l1.523.63c.956.4 1.409 1.5 1.009 2.455-.397.957-1.497 1.41-2.454 1.012H7.54zm11.415-9.303c0-1.662-1.353-3.015-3.015-3.015-1.665 0-3.015 1.353-3.015 3.015 0 1.665 1.35 3.015 3.015 3.015 1.663 0 3.015-1.35 3.015-3.015zm-5.273-.005c0-1.252 1.013-2.266 2.265-2.266 1.249 0 2.266 1.014 2.266 2.266 0 1.251-1.017 2.265-2.266 2.265-1.253 0-2.265-1.014-2.265-2.265z"/></svg>
+            <span class="ws-head-label">Steam Workshop</span>
+            <span class="ws-head-ext" aria-hidden="true">↗</span>
+          </div>
+          <div class="ws-card-img">
+            <img src="/assets/MecchaChameleon/kokiri-forest.webp" alt="Ocarina of Time : Kokiri Forest" loading="lazy">
+          </div>
+          <div class="ws-card-body">
+            <h3 class="ws-card-title">Kokiri Forest</h3>
+            <p class="ws-card-game">Meccha Chameleon · Ocarina of Time</p>
+            <div class="ws-card-meta">
+              <span class="ws-subs">
+                <span class="ws-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg></span>
+                <span data-steam="items.kokiri.subscriptions">99 K+</span>
+              </span>
+              <span class="ws-rating">★★★★<span class="ws-star-off">★</span></span>
+            </div>
+          </div>
+          <div class="ws-card-foot">
+            <span class="ws-btn" data-i18n="mod_card_btn">Voir sur le Workshop</span>
+          </div>
+        </a>
+
+      </div>
+
+      <p class="mod-freshness">
+        <span class="mod-live-dot" aria-hidden="true"></span>
+        <span id="mod-updated" data-i18n="mod_updated">Compteurs synchronisés avec le Steam Workshop</span>
+      </p>
+
+      <div class="mod-cta">
+        <a href="https://steamcommunity.com/id/Milomane/myworkshopfiles/?appid=4704690"
+           target="_blank" rel="noopener noreferrer" class="btn btn-primary" data-i18n="mod_cta">
+          Voir tous mes mods sur le Workshop →
+        </a>
+        <p class="mod-note" data-i18n="mod_note">Le total cumulé inclut une première version de Kokiri Forest (270 K+ abonnés), depuis remplacée par la version mise à jour.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ── PROJECTS GRID ── -->
+  <section class="section">
+    <div class="container">
+      <div class="portfolio-full-grid">
+
+        <!-- Projet Mobile 3D -->
+        <article class="portfolio-card" data-project="mobile3d" data-categories="pro unity" role="button" tabindex="0">
+          <div class="portfolio-card-img">
+            <img src="/assets/ProjetMobile3D/ProjetMobile3DEnLigne.webp" alt="Jeu Mobile 3D en ligne" loading="lazy">
+            <div class="portfolio-card-overlay">
+              <button class="btn btn-primary" data-i18n="card_details" tabindex="-1">Voir les détails</button>
+            </div>
+          </div>
+          <div class="portfolio-card-info">
+            <div class="portfolio-card-meta">
+              <span class="card-year">2025–2026</span>
+              <span class="card-type" data-i18n="card_pro">Professionnel</span>
+            </div>
+            <h3 data-i18n="exp1_role">Développeur / Prototypage · Jeu Mobile 3D en ligne</h3>
+            <p data-i18n="mobile3d_short">Jeu mobile 3D en ligne · Style party game · Freelance</p>
+            <div class="card-tags">
+              <span class="tag">Unity</span><span class="tag">Mobile</span><span class="tag">3D</span><span class="tag">Multijoueur</span><span class="tag">PurrNet</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Mods Meccha Chameleon -->
+        <article class="portfolio-card" data-project="meccha" data-categories="unreal modding" role="button" tabindex="0">
+          <div class="portfolio-card-img">
+            <img src="/assets/MecchaChameleon/MecchaChameleonMain.webp" alt="Mods Meccha Chameleon" loading="lazy">
+            <div class="portfolio-card-overlay">
+              <button class="btn btn-primary" data-i18n="card_details" tabindex="-1">Voir les détails</button>
+            </div>
+          </div>
+          <div class="portfolio-card-info">
+            <div class="portfolio-card-meta">
+              <span class="card-year">2026</span>
+              <span class="card-type" data-i18n="card_personal">Personnel</span>
+            </div>
+            <h3>Mods Meccha Chameleon</h3>
+            <p data-i18n="meccha_short">Maps Zelda sur Steam Workshop · Unreal Engine</p>
+            <div class="card-tags">
+              <span class="tag tag-accent">1,1 M+</span><span class="tag">Unreal</span><span class="tag">Level Design</span><span class="tag">Modding</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Heroes of Mavia -->
+        <article class="portfolio-card" data-project="mavia" data-categories="pro unity" role="button" tabindex="0">
+          <div class="portfolio-card-img">
+            <img src="/assets/Heroes of Mavia/HeroesOfMaviaMain.webp" alt="Heroes of Mavia" loading="lazy">
+            <div class="portfolio-card-overlay">
+              <button class="btn btn-primary" data-i18n="card_details" tabindex="-1">Voir les détails</button>
+            </div>
+          </div>
+          <div class="portfolio-card-info">
+            <div class="portfolio-card-meta">
+              <span class="card-year">2022–2024</span>
+              <span class="card-type" data-i18n="card_pro">Professionnel</span>
+            </div>
+            <h3>Heroes of Mavia</h3>
+            <p data-i18n="mavia_short">Jeu mobile AAA de stratégie · Skrice Studio</p>
+            <div class="card-tags">
+              <span class="tag">Unity</span><span class="tag">Mobile</span><span class="tag">3D</span><span class="tag">AAA</span><span class="tag">Gameplay</span><span class="tag">VFX</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Enigmagic -->
+        <article class="portfolio-card" data-project="enigmagic" data-categories="pro unity vr" role="button" tabindex="0">
+          <div class="portfolio-card-img">
+            <img src="/assets/Enigmagic/EnigmagicMain.webp" alt="Enigmagic" loading="lazy">
+            <div class="portfolio-card-overlay">
+              <button class="btn btn-primary" data-i18n="card_details" tabindex="-1">Voir les détails</button>
+            </div>
+          </div>
+          <div class="portfolio-card-info">
+            <div class="portfolio-card-meta">
+              <span class="card-year">2021–2022</span>
+              <span class="card-type" data-i18n="card_pro">Professionnel</span>
+            </div>
+            <h3>Enigmagic</h3>
+            <p data-i18n="enigmagic_short">Escape game VR · E-Artsup × Cyberith</p>
+            <div class="card-tags">
+              <span class="tag">Unity</span><span class="tag">VR</span><span class="tag">3D</span><span class="tag">Lead Dev</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- K-Bot -->
+        <article class="portfolio-card" data-project="kbot" data-categories="unity" role="button" tabindex="0">
+          <div class="portfolio-card-img">
+            <img src="/assets/K-Bot/K-BotMain.webp" alt="K-Bot" loading="lazy">
+            <div class="portfolio-card-overlay">
+              <button class="btn btn-primary" data-i18n="card_details" tabindex="-1">Voir les détails</button>
+            </div>
+          </div>
+          <div class="portfolio-card-info">
+            <div class="portfolio-card-meta">
+              <span class="card-year">2021</span>
+              <span class="card-type" data-i18n="card_student">Étudiant</span>
+            </div>
+            <h3>K-Bot</h3>
+            <p data-i18n="kbot_short">Puzzle-platformer 3D · E-Artsup</p>
+            <div class="card-tags">
+              <span class="tag">Unity</span><span class="tag">Gameplay</span><span class="tag">3D</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Planète Procédurale -->
+        <article class="portfolio-card" data-project="planet" data-categories="unity proc" role="button" tabindex="0">
+          <div class="portfolio-card-img">
+            <img src="/assets/GenerationPlanetProc/planete-proc.webp" alt="Planète Procédurale" loading="lazy">
+            <div class="portfolio-card-overlay">
+              <button class="btn btn-primary" data-i18n="card_details" tabindex="-1">Voir les détails</button>
+            </div>
+          </div>
+          <div class="portfolio-card-info">
+            <div class="portfolio-card-meta">
+              <span class="card-year">2021</span>
+              <span class="card-type" data-i18n="card_personal">Personnel</span>
+            </div>
+            <h3 data-i18n="planet_title">Planète Procédurale</h3>
+            <p data-i18n="planet_short">Génération procédurale de planète avec LOD sphérique</p>
+            <div class="card-tags">
+              <span class="tag">Unity</span><span class="tag">3D</span><span class="tag">Procédural</span><span class="tag">LOD</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Génération Voxel -->
+        <article class="portfolio-card" data-project="voxel" data-categories="unity proc" role="button" tabindex="0">
+          <div class="portfolio-card-img">
+            <img src="/assets/GenerationProcVoxel/generation-proc.webp" alt="Génération Voxel" loading="lazy">
+            <div class="portfolio-card-overlay">
+              <button class="btn btn-primary" data-i18n="card_details" tabindex="-1">Voir les détails</button>
+            </div>
+          </div>
+          <div class="portfolio-card-info">
+            <div class="portfolio-card-meta">
+              <span class="card-year">2020</span>
+              <span class="card-type" data-i18n="card_personal">Personnel</span>
+            </div>
+            <h3 data-i18n="voxel_title">Génération Procédurale Voxel</h3>
+            <p data-i18n="voxel_short">Clone Minecraft · Apprentissage Marching Cubes</p>
+            <div class="card-tags">
+              <span class="tag">Unity</span><span class="tag">3D</span><span class="tag">Voxel</span><span class="tag">Marching Cubes</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- City Destroyer -->
+        <article class="portfolio-card" data-project="city" data-categories="unreal" role="button" tabindex="0">
+          <div class="portfolio-card-img">
+            <img src="/assets/City Destroyer/city-destroyer.webp" alt="City Destroyer" loading="lazy">
+            <div class="portfolio-card-overlay">
+              <button class="btn btn-primary" data-i18n="card_details" tabindex="-1">Voir les détails</button>
+            </div>
+          </div>
+          <div class="portfolio-card-info">
+            <div class="portfolio-card-meta">
+              <span class="card-year">2022</span>
+              <span class="card-type" data-i18n="card_student">Étudiant</span>
+            </div>
+            <h3>City Destroyer</h3>
+            <p data-i18n="city_short">Mecha · Unreal Engine Chaos System</p>
+            <div class="card-tags">
+              <span class="tag">Unreal Engine</span><span class="tag">3D</span><span class="tag">Chaos</span><span class="tag">Destruction</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Sentry Dawn -->
+        <article class="portfolio-card" data-project="sentry" data-categories="unity jam" role="button" tabindex="0">
+          <div class="portfolio-card-img">
+            <img src="/assets/Sentry Dawn/sentry-down.webp" alt="Sentry Dawn" loading="lazy">
+            <div class="portfolio-card-overlay">
+              <button class="btn btn-primary" data-i18n="card_details" tabindex="-1">Voir les détails</button>
+            </div>
+          </div>
+          <div class="portfolio-card-info">
+            <div class="portfolio-card-meta">
+              <span class="card-year">GGJ 2020</span>
+              <span class="card-type" data-i18n="card_jam">Game Jam</span>
+            </div>
+            <h3>Sentry Dawn</h3>
+            <p data-i18n="sentry_short">Tower defense · Global Game Jam 2020</p>
+            <div class="card-tags">
+              <span class="tag">Unity</span><span class="tag">Tower Defense</span><span class="tag">Jam</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Memories Uncovered -->
+        <article class="portfolio-card" data-project="memories" data-categories="unity jam" role="button" tabindex="0">
+          <div class="portfolio-card-img">
+            <img src="/assets/MemoriesUncovered/memories-uncovered.webp" alt="Memories Uncovered" loading="lazy">
+            <div class="portfolio-card-overlay">
+              <button class="btn btn-primary" data-i18n="card_details" tabindex="-1">Voir les détails</button>
+            </div>
+          </div>
+          <div class="portfolio-card-info">
+            <div class="portfolio-card-meta">
+              <span class="card-year">GGJ 2021</span>
+              <span class="card-type" data-i18n="card_jam">Game Jam</span>
+            </div>
+            <h3>Memories Uncovered</h3>
+            <p data-i18n="memories_short">Labyrinthe roguelike · Global Game Jam 2021</p>
+            <div class="card-tags">
+              <span class="tag">Unity</span><span class="tag" data-i18n="tag_maze">Labyrinthe</span><span class="tag">Jam</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Galactic Jumping -->
+        <article class="portfolio-card" data-project="galactic" data-categories="unity" role="button" tabindex="0">
+          <div class="portfolio-card-img">
+            <img src="/assets/GalacticJumping/galactic-jumping.webp" alt="Galactic Jumping" loading="lazy">
+            <div class="portfolio-card-overlay">
+              <button class="btn btn-primary" data-i18n="card_details" tabindex="-1">Voir les détails</button>
+            </div>
+          </div>
+          <div class="portfolio-card-info">
+            <div class="portfolio-card-meta">
+              <span class="card-year">2020</span>
+              <span class="card-type" data-i18n="card_student">Étudiant</span>
+            </div>
+            <h3>Galactic Jumping</h3>
+            <p data-i18n="galactic_short">Jeu 2D gravité planétaire · Workshop 3 jours</p>
+            <div class="card-tags">
+              <span class="tag">Unity</span><span class="tag">2D</span><span class="tag" data-i18n="tag_gravity">Gravité</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Komrog -->
+        <article class="portfolio-card" data-project="komrog" data-categories="unity" role="button" tabindex="0">
+          <div class="portfolio-card-img">
+            <img src="/assets/Komrog/komrog.webp" alt="Komrog" loading="lazy">
+            <div class="portfolio-card-overlay">
+              <button class="btn btn-primary" data-i18n="card_details" tabindex="-1">Voir les détails</button>
+            </div>
+          </div>
+          <div class="portfolio-card-info">
+            <div class="portfolio-card-meta">
+              <span class="card-year">2019–2020</span>
+              <span class="card-type" data-i18n="card_student">Étudiant</span>
+            </div>
+            <h3>KOMROG</h3>
+            <p data-i18n="komrog_short">Roguelike 2D · Première année E-Artsup</p>
+            <div class="card-tags">
+              <span class="tag">Unity</span><span class="tag">Roguelike</span><span class="tag">2D</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Projet Tron -->
+        <article class="portfolio-card" data-project="tron" data-categories="unity" role="button" tabindex="0">
+          <div class="portfolio-card-img">
+            <img src="/assets/ProjetTron/projet-tron.webp" alt="Projet Tron" loading="lazy">
+            <div class="portfolio-card-overlay">
+              <button class="btn btn-primary" data-i18n="card_details" tabindex="-1">Voir les détails</button>
+            </div>
+          </div>
+          <div class="portfolio-card-info">
+            <div class="portfolio-card-meta">
+              <span class="card-year">2020–2021</span>
+              <span class="card-type" data-i18n="card_student">Étudiant</span>
+            </div>
+            <h3>Projet Tron</h3>
+            <p data-i18n="tron_short">Versus 3D · 2 à 4 joueurs · Moto + traînée</p>
+            <div class="card-tags">
+              <span class="tag">Unity</span><span class="tag">3D</span><span class="tag">Versus</span><span class="tag" data-i18n="tag_multiplayer">Multijoueur</span>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── VFX (compact) ── -->
+  <section id="vfx" class="section section-alt">
+    <div class="container">
+      <h2 class="section-title" data-i18n="vfx_title">VFX</h2>
+      <p class="section-sub" data-i18n="vfx_sub">Quelques aperçus de VFX réalisés sur mes projets</p>
+      <div class="vfx-grid">
+        <div class="vfx-item"><img src="/assets/gifs/BannerBurning.webp" alt="Feu" loading="lazy"><span data-i18n="vfx_fire">Feu</span></div>
+        <div class="vfx-item"><img src="/assets/gifs/BannerIce.webp"     alt="Glace" loading="lazy"><span data-i18n="vfx_ice">Glace</span></div>
+        <div class="vfx-item"><img src="/assets/gifs/Wall.webp"           alt="Mur" loading="lazy"><span data-i18n="vfx_wall">Mur</span></div>
+        <div class="vfx-item"><img src="/assets/gifs/Pillar.webp"         alt="Pilier" loading="lazy"><span data-i18n="vfx_pillar">Pilier</span></div>
+        <div class="vfx-item"><img src="/assets/gifs/Electricity.webp"    alt="Électricité" loading="lazy"><span data-i18n="vfx_electricity">Électricité</span></div>
+        <div class="vfx-item"><img src="/assets/gifs/Explosion.webp"      alt="Explosion" loading="lazy"><span data-i18n="vfx_explosion">Explosion</span></div>
+        <div class="vfx-item"><img src="/assets/gifs/Heal.webp"           alt="Soin" loading="lazy"><span data-i18n="vfx_heal">Soin</span></div>
+        <div class="vfx-item"><img src="/assets/gifs/Shader.webp"         alt="Shader" loading="lazy"><span data-i18n="vfx_shader">Shader</span></div>
+        <div class="vfx-item"><img src="/assets/gifs/Magic.webp"          alt="Magie" loading="lazy"><span data-i18n="vfx_magic">Magie</span></div>
+        <div class="vfx-item"><img src="/assets/gifs/Firefly.webp"        alt="Luciole" loading="lazy"><span data-i18n="vfx_firefly">Luciole</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── LEVEL DESIGN ── -->
+  <section id="level-design" class="section">
+    <div class="container">
+      <h2 class="section-title" data-i18n="pf_ld_title">Level Design</h2>
+      <p class="section-sub" data-i18n="pf_ld_sub">Quelques level design sur différents projets auxquels j'ai participé ou créés pour m'amuser.</p>
+      <div class="ld-grid">
+
+        <div class="ld-card" data-project="ld_kbot" role="button" tabindex="0">
+          <img src="/assets/K-Bot/LD-Intro.webp" alt="K-Bot Level Design" loading="lazy">
+          <div class="ld-card-info">
+            <h3 data-i18n="pf_ld_kbot">Level Design · K-Bot</h3>
+            <p data-i18n="pf_ld_kbot_desc">Plans des niveaux du jeu K-Bot avant construction 3D.</p>
+          </div>
+        </div>
+
+        <div class="ld-card" data-project="ld_proc" role="button" tabindex="0">
+          <img src="/assets/GenerationProcVoxel/procedural1.webp" alt="Génération Procédurale" loading="lazy">
+          <div class="ld-card-info">
+            <h3 data-i18n="pf_ld_proc">Level Design · Génération Procédurale</h3>
+            <p data-i18n="pf_ld_proc_desc">Captures du projet de génération procédurale en voxel.</p>
+          </div>
+        </div>
+
+        <div class="ld-card" data-project="ld_planet" role="button" tabindex="0">
+          <img src="/assets/GenerationPlanetProc/Planet1.webp" alt="Planète Procédurale" loading="lazy">
+          <div class="ld-card-info">
+            <h3 data-i18n="pf_ld_planet">Level Design · Planète Procédurale</h3>
+            <p data-i18n="pf_ld_planet_desc">Captures de la planète procédurale et du système de LOD.</p>
+          </div>
+        </div>
+
+        <div class="ld-card" data-project="ld_zelda" role="button" tabindex="0">
+          <img src="/assets/LevelDesignMaps/zelda/LvlRDC.webp" alt="Donjon Zelda" loading="lazy">
+          <div class="ld-card-info">
+            <h3 data-i18n="pf_ld_zelda">Level Design · Donjon Zelda Wind Waker</h3>
+            <p data-i18n="pf_ld_zelda_desc">Conception d'un donjon théorique de Zelda Wind Waker (3ème donjon), plans et réalisation 3D.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── FOOTER ── -->
+  <footer class="footer">
+    <p>© 2026 Florentin Roberge · <span data-i18n="footer_made">Fait avec passion</span> · <span style="opacity:0.35;font-size:0.75em;">v2.6</span></p>
+  </footer>
+
+  <!-- ── MODAL ── -->
+  <div id="modal-overlay" class="modal-overlay hidden" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <div class="modal-container">
+      <button class="modal-close" id="modal-close" aria-label="Fermer">✕</button>
+      <div class="modal-gallery" id="modal-gallery">
+        <button class="gallery-nav gallery-prev" id="gallery-prev" aria-label="Précédent">‹</button>
+        <img id="modal-img" src="" alt="">
+        <button class="gallery-nav gallery-next" id="gallery-next" aria-label="Suivant">›</button>
+        <div class="gallery-dots" id="gallery-dots"></div>
+      </div>
+      <div class="modal-info">
+        <div class="modal-meta">
+          <span id="modal-year" class="card-year"></span>
+          <span id="modal-type" class="card-type"></span>
+        </div>
+        <h2 id="modal-title"></h2>
+        <div id="modal-tags" class="card-tags"></div>
+        <p id="modal-desc"></p>
+        <ul id="modal-bullets" class="modal-bullets"></ul>
+        <div id="modal-links" class="modal-links"></div>
+      </div>
+    </div>
+  </div>
+
+  <script src="/js/main.js"></script>
+  <script>
+    // Extend projects for Level Design entries (portfolio page only)
+    Object.assign(projects, {
+      ld_kbot: {
+        title: { fr: "Level Design · K-Bot", en: "Level Design · K-Bot" },
+        year: "2021",
+        type: { fr: "Level Design", en: "Level Design" },
+        tags: ["Level Design", "K-Bot", "Unity"],
+        desc: {
+          fr: "Plans réalisés pour le level design du jeu K-Bot. L'introduction présente les mécaniques de base, et l'Usine est le niveau principal.",
+          en: "Plans made for K-Bot's level design. The introduction presents core mechanics, and the Factory is the main level."
+        },
+        images: ["assets/K-Bot/LD-Intro.webp", "assets/K-Bot/LD-Usine.webp"],
+        links: []
+      },
+      ld_proc: {
+        title: { fr: "Génération Procédurale — Voxel", en: "Procedural Generation — Voxel" },
+        year: "2020",
+        type: { fr: "Level Design", en: "Level Design" },
+        tags: ["Procédural", "Voxel", "Unity"],
+        desc: {
+          fr: "Captures supplémentaires du projet de génération procédurale en voxel.",
+          en: "Additional screenshots from the voxel procedural generation project."
+        },
+        images: [
+          "assets/GenerationProcVoxel/procedural1.webp",
+          "assets/GenerationProcVoxel/procedural2.webp",
+          "assets/GenerationProcVoxel/procedural3.webp",
+          "assets/GenerationProcVoxel/procedural4.webp",
+          "assets/GenerationProcVoxel/procedural5.webp"
+        ],
+        links: []
+      },
+      ld_planet: {
+        title: { fr: "Planète Procédurale — Galerie", en: "Procedural Planet — Gallery" },
+        year: "2021",
+        type: { fr: "Level Design", en: "Level Design" },
+        tags: ["Procédural", "LOD", "Unity"],
+        desc: {
+          fr: "Captures supplémentaires de la planète procédurale, montrant le système de LOD sphérique à différentes altitudes.",
+          en: "Additional screenshots of the procedural planet, showing the spherical LOD system at different altitudes."
+        },
+        images: [
+          "assets/GenerationPlanetProc/Planet1.webp",
+          "assets/GenerationPlanetProc/Planet2.webp",
+          "assets/GenerationPlanetProc/Planet4.webp",
+          "assets/GenerationPlanetProc/Planet5.webp",
+          "assets/GenerationPlanetProc/Planet6.webp"
+        ],
+        links: []
+      },
+      ld_zelda: {
+        title: { fr: "Donjon Zelda Wind Waker", en: "Zelda Wind Waker Dungeon" },
+        year: "2020",
+        type: { fr: "Level Design", en: "Level Design" },
+        tags: ["Level Design", "Zelda", "3D"],
+        desc: {
+          fr: "Conception d'un donjon théorique pour The Legend of Zelda: The Wind Waker (3ème donjon). Exercice de level design avec difficulté progressive, raccord narratif, et réalisation 3D.",
+          en: "Conception of a theoretical dungeon for The Legend of Zelda: The Wind Waker (3rd dungeon). Level design exercise with progressive difficulty, narrative connection, and 3D realization."
+        },
+        images: [
+          "assets/LevelDesignMaps/zelda/LvlRDC.webp",
+          "assets/LevelDesignMaps/zelda/Lvl-1.webp",
+          "assets/LevelDesignMaps/zelda/Lvl-2.webp",
+          "assets/LevelDesignMaps/zelda/Lvl-3 Boss.webp"
+        ],
+        links: []
+      }
+    });
+  </script>
+</body>
+</html>

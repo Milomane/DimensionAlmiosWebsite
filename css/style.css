@@ -464,6 +464,11 @@ p  { color: var(--text-2); }
   border-color: var(--accent);
   color: #fff;
 }
+/* On light backgrounds the translucent fill is too pale for white text */
+[data-theme="light"] .tag-accent {
+  background: var(--accent);
+  color: #fff;
+}
 .card-tags {
   display: flex;
   flex-wrap: wrap;
@@ -1348,6 +1353,230 @@ p  { color: var(--text-2); }
 
 @media (max-width: 600px) {
   .ld-grid { grid-template-columns: 1fr; }
+}
+
+/* === MODDING SECTION === */
+.mod-section {
+  position: relative;
+  overflow: hidden;
+  background: var(--bg-1);
+}
+.mod-bg {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(60% 80% at 15% 0%, rgba(124, 58, 237, 0.16), transparent 70%),
+    radial-gradient(50% 70% at 90% 100%, rgba(168, 85, 247, 0.12), transparent 70%);
+  pointer-events: none;
+}
+.mod-section .hero-eyebrow { margin-bottom: 10px; }
+.mod-title { margin-bottom: 8px; }
+.mod-sub { max-width: 720px; margin-bottom: 28px; }
+
+/* Stats row: compact chips reusing the .domain-tag vocabulary, so the
+   block stays short and the projects grid remains near the fold. */
+.mod-stats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 0 0 32px;
+}
+.mod-stat {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 8px;
+  padding: 7px 16px;
+  border-radius: 100px;
+  background: var(--accent-faint);
+  border: 1px solid var(--accent-border);
+  font-size: 0.82rem;
+  color: var(--text-2);
+}
+.mod-stat strong {
+  font-family: 'Space Mono', monospace;
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--text-1);
+}
+.mod-star { color: var(--accent-light); }
+
+/* Workshop cards, same shell as .portfolio-card so the section
+   sits inside the site's design language. Steam is signalled by the
+   glyph and the label, not by borrowing its palette. */
+.mod-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+.ws-card {
+  display: flex;
+  flex-direction: column;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  transition: border-color var(--transition), transform var(--transition), box-shadow var(--transition);
+}
+.ws-card:hover {
+  border-color: var(--accent-border-hover);
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-accent);
+}
+
+.ws-card-head {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 16px;
+  border-bottom: 1px solid var(--border-light);
+}
+.ws-steam {
+  width: 15px;
+  height: 15px;
+  color: var(--accent-light);
+  flex-shrink: 0;
+}
+.ws-head-label {
+  font-family: 'Space Mono', monospace;
+  font-size: 0.68rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--text-3);
+}
+.ws-head-ext {
+  margin-left: auto;
+  font-size: 0.8rem;
+  color: var(--text-3);
+  transition: color var(--transition);
+}
+.ws-card:hover .ws-head-ext { color: var(--accent-light); }
+
+.ws-card-img {
+  position: relative;
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+  background: var(--bg-2);
+}
+.ws-card-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+.ws-card:hover .ws-card-img img { transform: scale(1.04); }
+
+.ws-card-body { padding: 16px 18px 12px; }
+.ws-card-title {
+  font-size: 1.05rem;
+  margin-bottom: 4px;
+  color: var(--text-1);
+  transition: color var(--transition);
+}
+.ws-card:hover .ws-card-title { color: var(--accent-light); }
+.ws-card-game {
+  font-family: 'Space Mono', monospace;
+  font-size: 0.72rem;
+  color: var(--text-3);
+  margin: 0;
+}
+.ws-card-meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  margin-top: 14px;
+  padding-top: 12px;
+  border-top: 1px solid var(--border-light);
+}
+.ws-subs {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-family: 'Space Mono', monospace;
+  font-size: 0.78rem;
+  color: var(--text-2);
+}
+.ws-icon {
+  display: inline-flex;
+  color: var(--accent-light);
+}
+.ws-icon svg { width: 14px; height: 14px; }
+.ws-rating {
+  color: var(--accent-light);
+  font-size: 0.85rem;
+  letter-spacing: 1px;
+}
+.ws-star-off { color: var(--text-3); opacity: 0.5; }
+
+.ws-card-foot {
+  margin-top: auto;
+  padding: 0 18px 18px;
+}
+/* Mirrors .btn-outline, filling with accent when the card is hovered. */
+.ws-btn {
+  display: block;
+  padding: 9px 16px;
+  border-radius: 10px;
+  text-align: center;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text-1);
+  border: 1px solid var(--accent-border);
+  background: transparent;
+  transition: all var(--transition);
+}
+.ws-card:hover .ws-btn {
+  border-color: var(--accent);
+  background: var(--accent);
+  color: #fff;
+}
+
+/* Freshness indicator under the cards */
+.mod-freshness {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 24px;
+  font-family: 'Space Mono', monospace;
+  font-size: 0.72rem;
+  color: var(--text-3);
+}
+.mod-live-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--accent-light);
+  animation: modPulse 2.4s ease-out infinite;
+}
+@keyframes modPulse {
+  0%   { box-shadow: 0 0 0 0 var(--accent-glow); }
+  70%  { box-shadow: 0 0 0 7px rgba(124, 58, 237, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(124, 58, 237, 0); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .mod-live-dot { animation: none; }
+}
+
+.mod-cta {
+  margin-top: 36px;
+  text-align: center;
+}
+.mod-note {
+  margin: 14px auto 0;
+  max-width: 620px;
+  font-size: 0.75rem;
+  color: var(--text-3);
+  line-height: 1.5;
+}
+
+@media (max-width: 900px) {
+  .mod-grid  { grid-template-columns: repeat(2, 1fr); }
+  .mod-stats { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 560px) {
+  .mod-grid { grid-template-columns: 1fr; }
+  .mod-card-go { opacity: 1; transform: translate(-50%, 0); }
 }
 
 /* === UTILITY === */
