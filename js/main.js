@@ -60,7 +60,7 @@ const i18n = {
     exp2_desc:       "Développement de fonctionnalités gameplay et d'effets visuels (VFX), intégration graphique, et création d'outils sur mesure pour les workflows artistes et développeurs. Optimisation de la production au sein d'une équipe internationale.",
     exp2_highlight:  "Gameplay · VFX · Intégration graphique · Outils custom · Équipe internationale",
     exp3_role:       "Formateur — initiation au développement de jeux",
-    exp3_desc:       "Initiation des jeunes aux fondamentaux de la création de jeux vidéo, de la logique et des logiciels de développement (Construct, Minecraft). Intervention chez Sercel pour une semaine d'innovation Unity.",
+    exp3_desc:       "Initiation des jeunes aux fondamentaux de la création de jeux vidéo, de la logique et des logiciels de développement (Construct, Godot, Minecraft). Intervention chez Sercel pour une semaine d'innovation Unity.",
     exp4_role:       "Développeur Unity 3D · Lead développeur · Enigmagic",
     exp4_desc:       "Projet en collaboration entre E-Artsup et Cyberith, 9 mois à temps plein. Supervision d'une équipe de 9 développeurs et artistes. Chef de projet et lead développeur, avec un focus sur les sorts et les interactions du joueur. Compatible avec le walker VR Virtualizer 2 de Cyberith.",
     exp4_highlight:  "Chef de projet · Lead Dev · Virtualizer 2 · 9 personnes · Sorts & interactions VR",
@@ -170,12 +170,12 @@ const i18n = {
 
     tooltip_unity:     "6+ ans · Moteur principal · Gameplay, VFX, tools, mobile, VR, multijoueur",
     tooltip_ue:        "Level design & modding · Maps Meccha Chameleon (1,1 M+ d'abonnements) · City Destroyer (Chaos System)",
-    tooltip_godot:     "Bases · Exploration personnelle · Enseignement chez Studio XP (GDScript)",
+    tooltip_godot:     "Développement gameplay · Projets personnels · Enseignement chez Studio XP (GDScript)",
     tooltip_construct: "Utilisé en enseignement · Studio XP",
     tooltip_csharp:    "Expert · Langage principal sur tous mes projets Unity",
     tooltip_python:    "Intermédiaire · Outils, pipelines IA, bots Discord",
     tooltip_lua:       "Modding Minecraft · NeoForge / KubeJS",
-    tooltip_gdscript:  "GDScript · Enseignement chez Studio XP · Exploration Godot",
+    tooltip_gdscript:  "GDScript · Projets personnels sous Godot · Enseignement chez Studio XP",
     tooltip_hlsl:      "Custom shaders, VFX, renderer features sous URP",
   },
 
@@ -232,7 +232,7 @@ const i18n = {
     exp2_desc:       "Gameplay feature and visual effects (VFX) development, graphical integration, and custom tool creation for artist and developer workflows. Optimized production within an international team.",
     exp2_highlight:  "Gameplay · VFX · Graphical integration · Custom tools · International team",
     exp3_role:       "Instructor — game development fundamentals",
-    exp3_desc:       "Teaching young people the fundamentals of game creation, logic, and development tools (Construct, Minecraft). Ran a Unity innovation week at Sercel.",
+    exp3_desc:       "Teaching young people the fundamentals of game creation, logic, and development tools (Construct, Godot, Minecraft). Ran a Unity innovation week at Sercel.",
     exp4_role:       "Unity 3D Developer · Lead Developer · Enigmagic",
     exp4_desc:       "Collaborative project between E-Artsup and Cyberith, 9 months full-time. Supervised a team of 9 developers and artists. Project manager and lead developer, focused on spells and player interactions. Compatible with the Virtualizer 2 VR walker by Cyberith.",
     exp4_highlight:  "Project Manager · Lead Dev · Virtualizer 2 · 9 people · VR spells & interactions",
@@ -342,12 +342,12 @@ const i18n = {
 
     tooltip_unity:     "6+ years · Main engine · Gameplay, VFX, tools, mobile, VR, multiplayer",
     tooltip_ue:        "Level design & modding · Meccha Chameleon maps (1.1M+ subscribers) · City Destroyer (Chaos System)",
-    tooltip_godot:     "Basics · Personal exploration · Teaching at Studio XP (GDScript)",
+    tooltip_godot:     "Gameplay development · Personal projects · Teaching at Studio XP (GDScript)",
     tooltip_construct: "Used for teaching · Studio XP",
     tooltip_csharp:    "Expert · Primary language across all my Unity projects",
     tooltip_python:    "Intermediate · Tools, AI pipelines, Discord bots",
     tooltip_lua:       "Minecraft modding · NeoForge / KubeJS",
-    tooltip_gdscript:  "GDScript · Teaching at Studio XP · Godot exploration",
+    tooltip_gdscript:  "GDScript · Personal Godot projects · Teaching at Studio XP",
     tooltip_hlsl:      "Custom shaders, VFX, renderer features under URP",
   }
 };
