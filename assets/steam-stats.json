@@ -1,46 +1,46 @@
 {
-  "updated": "2026-08-20T18:34:22.577Z",
+  "updated": "2026-08-21T01:05:59.096Z",
   "totals": {
-    "subscriptions": 1257532,
-    "lifetime": 1321654,
-    "views": 1278371,
-    "favorited": 2375,
+    "subscriptions": 1258215,
+    "lifetime": 1322428,
+    "views": 1279145,
+    "favorited": 2378,
     "maps": 4
   },
   "items": {
     "clocktown": {
       "id": "3759263940",
       "title": "Majora's Mask - ClockTown",
-      "subscriptions": 550747,
-      "lifetime": 574367,
-      "views": 583320,
-      "favorited": 1074,
+      "subscriptions": 551226,
+      "lifetime": 574889,
+      "views": 583851,
+      "favorited": 1075,
       "stale": false
     },
     "kakariko": {
       "id": "3750985352",
       "title": "Ocarina of Time - Kakariko Village",
-      "subscriptions": 312757,
-      "lifetime": 328697,
-      "views": 299130,
-      "favorited": 524,
+      "subscriptions": 312799,
+      "lifetime": 328757,
+      "views": 299193,
+      "favorited": 525,
       "stale": false
     },
     "kokiri": {
       "id": "3764609424",
       "title": "Ocarina of Time - Kokiri Forest - [UDPATED]",
-      "subscriptions": 118976,
-      "lifetime": 124505,
-      "views": 133303,
-      "favorited": 269,
+      "subscriptions": 119099,
+      "lifetime": 124639,
+      "views": 133427,
+      "favorited": 270,
       "stale": false
     },
     "kokiriOld": {
       "id": "3748754779",
       "title": "Ocarina of Time - Kokiri Forest - OLD",
-      "subscriptions": 275052,
-      "lifetime": 294085,
-      "views": 262618,
+      "subscriptions": 275091,
+      "lifetime": 294143,
+      "views": 262674,
       "favorited": 508,
       "stale": false
     }
