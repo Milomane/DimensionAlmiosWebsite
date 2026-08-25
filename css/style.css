@@ -1257,6 +1257,16 @@ p  { color: var(--text-2); }
   color: #fff;
   border-color: var(--accent);
 }
+/* A downloadable build is the primary action, so it reads filled from the
+   start rather than only on hover. */
+.modal-links a.primary {
+  background: var(--accent);
+  color: #fff;
+  border-color: var(--accent);
+}
+.modal-links a.primary:hover {
+  filter: brightness(1.12);
+}
 
 @media (max-width: 600px) {
   .modal-container { border-radius: var(--radius); }

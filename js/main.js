@@ -554,7 +554,13 @@ const projects = {
       "/assets/City Destroyer/CityDestroyer2.webp",
       "/assets/City Destroyer/CityDestroyer3.webp"
     ],
-    links: []
+    links: [
+      {
+        label: { fr: "Télécharger (Windows, 500 Mo)", en: "Download (Windows, 500 MB)" },
+        url: "https://github.com/Milomane/DimensionAlmiosWebsite/releases/download/city-destroyer-v1.0/CityDestroyer-Windows.zip",
+        primary: true
+      }
+    ]
   },
   sentry: {
     title: "Sentry Dawn",
@@ -814,7 +820,12 @@ function openModal(id) {
     a.href = link.url;
     a.target = '_blank';
     a.rel = 'noopener noreferrer';
-    a.textContent = link.label;
+    /* Same convention as the tags above: a { fr, en } pair when the label is
+       a real phrase rather than a proper noun. */
+    a.textContent = (link.label && typeof link.label === 'object')
+      ? link.label[currentLang]
+      : link.label;
+    if (link.primary) a.className = 'primary';
     linksEl.appendChild(a);
   });
 
